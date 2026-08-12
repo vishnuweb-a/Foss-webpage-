@@ -33,11 +33,16 @@ export function Magnifier({ children, className, scale = SCALE }: MagnifierProps
   const holderRef = useRef<HTMLDivElement>(null)
   const frame = useRef<number | null>(null)
 
+  const snapTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
+
   const st = useRef({
     x: 0,
     y: 0,
     tx: 0,
     ty: 0,
+    /** Last cursor position in client space, so scroll can re-derive the target. */
+    cx: 0,
+    cy: 0,
     s: REST_SCALE,
     ts: REST_SCALE,
     radius: 0,
@@ -109,22 +114,32 @@ export function Magnifier({ children, className, scale = SCALE }: MagnifierProps
     holder.replaceChildren(clone)
   }, [])
 
-  const setTarget = useCallback((e: React.PointerEvent, snap: boolean) => {
+  /** Re-derive the host-local target from the last known cursor position. */
+  const retarget = useCallback(() => {
     const host = hostRef.current
     if (!host) return
     const box = host.getBoundingClientRect()
     const s = st.current
-    s.tx = e.clientX - box.left
-    s.ty = e.clientY - box.top
-    if (snap) {
-      s.x = s.tx
-      s.y = s.ty
-    }
+    s.tx = s.cx - box.left
+    s.ty = s.cy - box.top
   }, [])
 
-  const onEnter = useCallback(
+  const setTarget = useCallback(
+    (e: React.PointerEvent, snap: boolean) => {
+      const s = st.current
+      s.cx = e.clientX
+      s.cy = e.clientY
+      retarget()
+      if (snap) {
+        s.x = s.tx
+        s.y = s.ty
+      }
+    },
+    [retarget],
+  )
+
+  const activate = useCallback(
     (e: React.PointerEvent) => {
-      if (!enabled || e.pointerType !== 'mouse') return
       const lens = lensRef.current
       if (!lens) return
       st.current.radius = lens.offsetWidth / 2
@@ -136,15 +151,28 @@ export function Magnifier({ children, className, scale = SCALE }: MagnifierProps
       draw()
       start()
     },
-    [draw, enabled, setTarget, snapshot, start],
+    [draw, setTarget, snapshot, start],
   )
 
+  /**
+   * Both entering and moving route through here.
+   *
+   * `pointerenter` alone is not enough: the cursor is very often already inside
+   * the text — after the section scrolls under a stationary cursor, or after
+   * anything else deactivates the lens — and in that case no further enter
+   * event will ever fire. Treating a move over an inactive lens as an entry is
+   * what keeps it from appearing dead.
+   */
   const onMove = useCallback(
     (e: React.PointerEvent) => {
-      if (!st.current.active) return
+      if (!enabled || e.pointerType !== 'mouse') return
+      if (!st.current.active) {
+        activate(e)
+        return
+      }
       setTarget(e, false)
     },
-    [setTarget],
+    [activate, enabled, setTarget],
   )
 
   const dismiss = useCallback(() => {
@@ -156,26 +184,42 @@ export function Magnifier({ children, className, scale = SCALE }: MagnifierProps
     start()
   }, [start])
 
+  /**
+   * This is a scroll-driven experience, so the lens has to survive scrolling.
+   *
+   * The host moves under a stationary cursor, so the target is re-derived from
+   * the last client position every scroll event — cheap. The snapshot is a
+   * still and the source may be mid-timeline, so it is retaken once the scroll
+   * settles rather than on every frame.
+   */
+  const onScroll = useCallback(() => {
+    if (!st.current.active) return
+    retarget()
+    if (snapTimer.current) clearTimeout(snapTimer.current)
+    snapTimer.current = setTimeout(() => {
+      if (st.current.active) snapshot()
+    }, 90)
+  }, [retarget, snapshot])
+
   useEffect(() => {
     if (!enabled) return
     st.current.reduced = window.matchMedia(
       '(prefers-reduced-motion: reduce)',
     ).matches
 
-    /* The snapshot is a still. Scrolling can animate the source underneath it,
-       so the lens closes rather than showing a stale copy. */
-    window.addEventListener('scroll', dismiss, { passive: true })
+    window.addEventListener('scroll', onScroll, { passive: true })
     return () => {
-      window.removeEventListener('scroll', dismiss)
+      window.removeEventListener('scroll', onScroll)
+      if (snapTimer.current) clearTimeout(snapTimer.current)
       if (frame.current !== null) cancelAnimationFrame(frame.current)
     }
-  }, [dismiss, enabled])
+  }, [enabled, onScroll])
 
   return (
     <div
       ref={hostRef}
       className={`relative ${className ?? ''}`}
-      onPointerEnter={onEnter}
+      onPointerEnter={onMove}
       onPointerMove={onMove}
       onPointerLeave={dismiss}
     >
