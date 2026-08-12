@@ -1,6 +1,7 @@
 import { useCallback } from 'react'
 import { gsap } from '@/motion/gsap'
 import { Scene, type SceneBuild } from '@/components/Scene'
+import { Magnifier } from '@/components/Magnifier'
 import { responsible } from '@/data/content'
 import type { SceneProps } from '@/scenes/types'
 
@@ -75,18 +76,21 @@ export function ResponsibleScene({ def, index }: SceneProps) {
           ))}
         </ol>
 
-        <ul className="columns-1 gap-x-12 sm:columns-2 lg:columns-3">
-          {responsible.principles.map((p) => (
-            <li
-              key={p}
-              data-principle
-              className="text-ink-dim mb-3 break-inside-avoid text-lead opacity-0"
-            >
-              <span className="text-accent-deep mr-3 font-mono text-label">—</span>
-              {p}
-            </li>
-          ))}
-        </ul>
+        {/* The one section that asks you to read carefully gets the lens. */}
+        <Magnifier>
+          <ul className="columns-1 gap-x-12 sm:columns-2 lg:columns-3">
+            {responsible.principles.map((p) => (
+              <li
+                key={p}
+                data-principle
+                className="text-ink-dim mb-3 break-inside-avoid text-lead opacity-0"
+              >
+                <span className="text-accent-deep mr-3 font-mono text-label">—</span>
+                {p}
+              </li>
+            ))}
+          </ul>
+        </Magnifier>
 
         <p
           data-close
