@@ -9,9 +9,27 @@
  * fact was not supplied in the PRD, it does not appear here.
  */
 
+import fossLogo from '@/assets/foss-logo-flush.png'
+
 export const brand = {
-  /** Wordmark only for now; a logo asset will replace this slot later. */
   wordmark: 'FOSS',
+  /**
+   * The official mark, used as the identity in the opening.
+   *
+   * The supplied file is `foss-logo.png` and is kept in the repository exactly
+   * as delivered. It ships with an opaque rgb(9,13,18) plate, which renders as
+   * a visible rectangle against the page — the "logo card" rules.prd §02 rules
+   * out. `foss-logo-flush.png` is that same artwork with the flat plate
+   * un-composited away: no colour remapped, no shape redrawn, only the backdrop
+   * removed. Point this back at `foss-logo.png` to use the file verbatim.
+   */
+  logo: fossLogo,
+  logoAlt: 'FOSS — Free and Open Source Software',
+  /**
+   * Optional override that would replace the finale's typographic
+   * "WELCOME TO FOSS". Deliberately left null: FOSS.prd §18 specifies that
+   * line as the closing statement, so the climax stays typographic.
+   */
   logoSrc: null as string | null,
 } as const
 
@@ -39,6 +57,11 @@ export const opening = {
   title: 'WELCOME TO FOSS',
   support: "Don't just use technology. Be part of it.",
   cue: 'STARTING JOURNEY',
+} as const
+
+export const facultyCoordinators = {
+  label: 'FACULTY COORDINATORS',
+  names: ['Dr. Mani Devi', 'Dr. Priyanka Maan'],
 } as const
 
 /* ─── 02 What Is FOSS ────────────────────────────────────────────────────── */
@@ -290,4 +313,9 @@ export const finale = {
   welcome: 'WELCOME TO FOSS',
   support: 'Learn. Build. Collaborate. Contribute.',
   cta: 'Your first contribution could start today.',
+} as const
+
+export const studentCoordinator = {
+  label: 'STUDENT COORDINATOR',
+  name: 'VISHNU BHARDWAJ',
 } as const

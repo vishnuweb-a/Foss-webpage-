@@ -36,11 +36,26 @@ requests, so the experience works on a projector with no internet.
 **All copy lives in [`src/data/`](src/data/) — no text is written inside
 components.** The club can revise wording without touching component logic.
 
-- [`src/data/content.ts`](src/data/content.ts) — every headline, body line and label
+- [`src/data/content.ts`](src/data/content.ts) — every headline, body line and label, including the faculty and student coordinators
 - [`src/data/technologies.ts`](src/data/technologies.ts) — the technology graph: nodes *and* the edges between them
 
-A logo can replace the `FOSS` wordmark by setting `brand.logoSrc` in
-`content.ts`; no layout changes are needed.
+### The logo
+
+Two files sit in [`src/assets/`](src/assets/):
+
+| File | Purpose |
+|---|---|
+| `foss-logo.png` | The asset exactly as supplied. Never modified. |
+| `foss-logo-flush.png` | The same artwork with its flat opaque backdrop un-composited away. This is what renders. |
+
+The supplied export carries a solid `rgb(9,13,18)` plate. Against the page's
+`rgb(9,10,14)` that plate reads as a faint rectangle around the mark — the
+"logo card" `rules.prd` §02 rules out. The flush variant removes only that
+backdrop: no colour is remapped and no shape redrawn.
+
+Point `brand.logo` in `content.ts` back at `foss-logo.png` to use the supplied
+file verbatim. **If you have the logo with a transparent background (or as
+SVG), drop it in and use it directly — that is strictly better than either.**
 
 To add, remove or reorder scenes, edit
 [`src/scenes/registry.ts`](src/scenes/registry.ts). It is the single source of
