@@ -315,7 +315,7 @@ export const finale = {
   cta: 'Your first contribution could start today.',
 } as const
 
-export const studentCoordinator = {
-  label: 'STUDENT COORDINATOR',
-  name: 'VISHNU BHARDWAJ',
+export const studentCoordinators = {
+  label: 'STUDENT COORDINATORS',
+  names: ['VISHNU BHARDWAJ', 'MAITREYI'],
 } as const

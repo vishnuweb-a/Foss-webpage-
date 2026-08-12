@@ -1,7 +1,7 @@
 import { useCallback } from 'react'
 import { gsap } from '@/motion/gsap'
 import { Scene, type SceneBuild } from '@/components/Scene'
-import { brand, finale, studentCoordinator } from '@/data/content'
+import { brand, finale, studentCoordinators } from '@/data/content'
 import type { SceneProps } from '@/scenes/types'
 
 /**
@@ -117,11 +117,18 @@ export function FinaleScene({ def, index }: SceneProps) {
             {/* Lands last, inside the arrival — a closing credit, not a footer. */}
             <div data-coordinator className="mt-[5svh] opacity-0">
               <p className="text-ink-faint font-mono text-label tracking-label">
-                {studentCoordinator.label}
+                {studentCoordinators.label}
               </p>
-              <p className="text-ink mt-2 font-display text-title font-bold leading-none tracking-tight">
-                {studentCoordinator.name}
-              </p>
+              <div className="mt-2 flex flex-col gap-1">
+                {studentCoordinators.names.map((name) => (
+                  <p
+                    key={name}
+                    className="text-ink font-display text-title font-bold leading-none tracking-tight"
+                  >
+                    {name}
+                  </p>
+                ))}
+              </div>
             </div>
           </div>
         </div>
