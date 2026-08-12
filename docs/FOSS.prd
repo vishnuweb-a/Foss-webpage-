@@ -1,0 +1,1367 @@
+# PRD — Interactive FOSS Welcome Experience
+
+## 1. Product Overview
+
+### Product Name
+
+**FOSS Interactive Journey**
+
+### Product Type
+
+Immersive, one-page, presentation-style web experience.
+
+### Primary Purpose
+
+Create an engaging digital experience for introducing students to the concept of **Free and Open Source Software (FOSS)** and the mindset behind it.
+
+The website should not feel like a conventional website or PowerPoint presentation.
+
+It should feel like a **guided technological journey** where the audience moves from:
+
+> **Technology → Exploration → Building → Collaboration → Contribution**
+
+The experience will be used primarily during a **FOSS club welcome/webinar presentation**, where the presenter can navigate through the website section-by-section like an interactive presentation.
+
+---
+
+# 2. Core Concept
+
+The central philosophy of the experience is:
+
+> **Don't just consume technology. Understand it. Build with it. Improve it. Contribute to it.**
+
+The website should communicate that FOSS is not simply about downloading free software.
+
+It is about:
+
+* Learning
+* Exploring
+* Experimenting
+* Creating
+* Collaborating
+* Sharing
+* Contributing
+* Building real-world experience
+
+The final emotional takeaway should be:
+
+> **“I don't just want to use technology. I want to understand it, build with it, and contribute to it.”**
+
+---
+
+# 3. Product Vision
+
+Transform a traditional FOSS club introduction into an **interactive technology experience**.
+
+Instead of presenting information through static slides, the website should use:
+
+* 3D visuals
+* Interactive elements
+* Scroll-driven storytelling
+* Cinematic transitions
+* Terminal animations
+* Technology ecosystems
+* Git/GitHub-inspired visuals
+* Motion graphics
+* Interactive roadmaps
+
+The experience should combine:
+
+> **Apple-style storytelling + GitHub/Open Source aesthetics + futuristic 3D technology visualization.**
+
+---
+
+# 4. Target Audience
+
+### Primary Audience
+
+University students, especially:
+
+* First-year students
+* Computer science students
+* Technology enthusiasts
+* Beginners in programming
+* Students interested in AI
+* Web developers
+* Open-source beginners
+* Students interested in cloud/DevOps
+* Hackathon participants
+
+### Secondary Audience
+
+* Faculty
+* Club coordinators
+* Developers
+* Technology communities
+* Potential open-source contributors
+
+---
+
+# 5. User Experience Goal
+
+A student should enter the website thinking:
+
+> “What is FOSS?”
+
+and leave thinking:
+
+> “I want to explore technology and contribute to something real.”
+
+The experience should progressively move the user through:
+
+```text
+CURIOUS
+   ↓
+LEARN
+   ↓
+EXPLORE
+   ↓
+BUILD
+   ↓
+COLLABORATE
+   ↓
+CONTRIBUTE
+   ↓
+CREATE
+```
+
+---
+
+# 6. Experience Architecture
+
+The website will be a **single-page immersive experience** divided into major storytelling sections.
+
+It should behave like a presentation.
+
+Users should be able to navigate using:
+
+* Mouse wheel
+* Trackpad
+* Keyboard arrow keys
+* Spacebar where appropriate
+* Navigation controls
+* Optional section navigation
+
+The preferred interaction model is:
+
+> **Scroll = Progress through the FOSS journey**
+
+Each section should have its own visual identity while maintaining one continuous visual language.
+
+---
+
+# 7. Section 01 — Opening / Welcome
+
+## Objective
+
+Create an immediate sense of curiosity and establish the futuristic technology theme.
+
+### Primary Heading
+
+> **WELCOME TO FOSS**
+
+### Supporting Message
+
+> Don't just use technology. Be part of it.
+
+### Visual Concept
+
+A dark futuristic environment containing:
+
+* Subtle particles
+* Floating technology elements
+* Git branches
+* Network connections
+* 3D objects
+* Terminal window
+* FOSS-related visual elements
+
+### Terminal Animation
+
+The opening can contain a simulated terminal:
+
+```text
+$ whoami
+future_developer
+
+$ ./start-journey.sh
+
+Initializing FOSS...
+
+✓ Open Source
+✓ Collaboration
+✓ Innovation
+✓ Contribution
+
+Journey initialized...
+```
+
+The terminal should appear progressively rather than all at once.
+
+### Transition
+
+After initialization:
+
+```text
+STARTING JOURNEY...
+```
+
+The interface transitions into the next section.
+
+---
+
+# 8. Section 02 — What Is FOSS?
+
+## Objective
+
+Explain FOSS without using a boring textbook definition.
+
+### Main Heading
+
+> **WHAT IS FOSS?**
+
+### Core Interaction
+
+Create an interactive horizontal sequence:
+
+```text
+USE
+  →
+STUDY
+  →
+MODIFY
+  →
+SHARE
+  →
+CONTRIBUTE
+```
+
+Each item should be interactive.
+
+On hover/click, reveal a short explanation.
+
+### Example
+
+**USE**
+
+Explore software created and shared by the community.
+
+**STUDY**
+
+Understand how the software works.
+
+**MODIFY**
+
+Adapt and improve it for your needs.
+
+**SHARE**
+
+Share knowledge, improvements and software responsibly.
+
+**CONTRIBUTE**
+
+Give improvements back to the community.
+
+### Visual Direction
+
+The five stages should visually connect like a Git branch or network.
+
+---
+
+# 9. Section 03 — The FOSS Mindset
+
+## Objective
+
+Communicate that FOSS is fundamentally a mindset.
+
+### Main Statement
+
+> **FOSS IS NOT JUST ABOUT SOFTWARE.**
+
+Then transition to:
+
+> **IT'S ABOUT A MINDSET.**
+
+### Interactive Transformation
+
+The user progresses through:
+
+```text
+CONSUMER
+   ↓
+EXPLORER
+   ↓
+BUILDER
+   ↓
+COLLABORATOR
+   ↓
+CONTRIBUTOR
+   ↓
+OPEN-SOURCE CREATOR
+```
+
+Each stage should have:
+
+* Short explanation
+* Visual transformation
+* Subtle animation
+
+### Key Message
+
+> We don't simply consume technology.
+
+We:
+
+* Understand it
+* Experiment with it
+* Improve it
+* Build with it
+* Contribute back
+
+---
+
+# 10. Section 04 — Technology Universe
+
+## Objective
+
+Show students the breadth of technologies they can explore through the FOSS ecosystem.
+
+### Main Heading
+
+> **YOUR TECHNOLOGY UNIVERSE**
+
+### Central Object
+
+Place the student/user at the center.
+
+Around the center, create an interactive 3D ecosystem.
+
+### Technology Nodes
+
+Include:
+
+* Git
+* GitHub
+* Linux
+* AI / ML
+* Web Development
+* Cloud
+* DevOps
+* Databases
+* Cybersecurity
+* Automation
+* APIs
+* Developer Tools
+
+### Interaction
+
+Users can:
+
+* Hover over technologies
+* Click technologies
+* Rotate/inspect the ecosystem where applicable
+* Reveal short descriptions
+* Follow connections between technologies
+
+### Example
+
+Clicking **Git**:
+
+> Version control for your code.
+
+Clicking **Linux**:
+
+> Explore the operating system powering much of modern infrastructure.
+
+Clicking **AI**:
+
+> Build, experiment and contribute to the next generation of intelligent systems.
+
+### Design Principle
+
+Do not make this look like a grid of ordinary cards.
+
+It should feel like an **interactive technology constellation**.
+
+---
+
+# 11. Section 05 — Classroom → Real World
+
+## Objective
+
+Show why practical FOSS experience matters.
+
+### Initial State
+
+```text
+CLASSROOM
+
+LEARN
+  ↓
+ASSIGNMENT
+  ↓
+EXAM
+```
+
+Then animate the transformation.
+
+### Final State
+
+```text
+REAL WORLD
+
+LEARN
+  ↓
+BUILD
+  ↓
+COLLABORATE
+  ↓
+DEPLOY
+  ↓
+CONTRIBUTE
+```
+
+### Main Message
+
+> **Move beyond classroom learning to practical learning.**
+
+### Supporting Content
+
+Students should understand that working with open-source projects can help them develop:
+
+* Practical skills
+* Teamwork
+* Problem solving
+* Version control experience
+* Project experience
+* Industry-relevant workflows
+
+---
+
+# 12. Section 06 — Use Open Source Responsibly
+
+## Objective
+
+Teach students that using open-source software also comes with responsibility.
+
+### Main Heading
+
+> **DON'T BUILD EVERYTHING FROM SCRATCH.**
+
+Then:
+
+> Someone may have already solved the problem you're trying to solve.
+
+### Visual Flow
+
+```text
+PROBLEM
+   ↓
+SEARCH
+   ↓
+DISCOVER OPEN SOURCE
+   ↓
+UNDERSTAND
+   ↓
+CUSTOMIZE
+   ↓
+BUILD
+```
+
+### Responsible Usage Principles
+
+Show interactive points:
+
+* Read documentation
+* Understand the project
+* Check the license
+* Respect project rules
+* Customize responsibly
+* Give appropriate credit
+* Understand dependencies
+
+### Core Message
+
+> **Use open source. Learn from it. Respect it.**
+
+---
+
+# 13. Section 07 — Contribution
+
+## Objective
+
+Remove the misconception that open-source contribution is only for expert programmers.
+
+### Main Heading
+
+> **YOU DON'T HAVE TO BE AN EXPERT TO CONTRIBUTE.**
+
+### Contribution Ladder
+
+Create a visually animated ladder:
+
+```text
+USE
+ ↓
+UNDERSTAND
+ ↓
+REPORT
+ ↓
+DOCUMENT
+ ↓
+DISCUSS
+ ↓
+CODE
+ ↓
+CONTRIBUTE
+```
+
+### Contribution Examples
+
+Students can:
+
+* Report bugs
+* Improve documentation
+* Fix typos
+* Improve examples
+* Test features
+* Participate in discussions
+* Improve UI
+* Create tutorials
+* Fix issues
+* Submit pull requests
+* Contribute code
+
+### Key Message
+
+> **Your first contribution can start small.**
+
+---
+
+# 14. Section 08 — Our Club Journey
+
+## Objective
+
+Explain how the FOSS club will help students move from beginners to contributors.
+
+### Main Heading
+
+> **OUR JOURNEY TOGETHER**
+
+Create a four-stage interactive roadmap.
+
+---
+
+## Phase 01 — EXPLORE
+
+Students learn the fundamentals.
+
+Topics may include:
+
+* FOSS fundamentals
+* Git
+* GitHub
+* Linux
+* Open-source ecosystem
+* Developer tools
+
+---
+
+## Phase 02 — BUILD
+
+Students begin creating.
+
+Activities:
+
+* Mini projects
+* Web development
+* AI experiments
+* APIs
+* Cloud projects
+* Automation
+* Open-source tools
+
+---
+
+## Phase 03 — COLLABORATE
+
+Students work together.
+
+Activities:
+
+* Team projects
+* GitHub workflows
+* Issues
+* Pull requests
+* Code reviews
+* Discussions
+* Hackathons
+
+---
+
+## Phase 04 — CONTRIBUTE
+
+Students enter the real open-source ecosystem.
+
+Activities:
+
+* Find beginner-friendly repositories
+* Identify issues
+* Make changes
+* Submit pull requests
+* Participate in communities
+* Build open-source portfolios
+
+---
+
+# 15. Section 09 — Learning Model
+
+## Objective
+
+Explain how learning inside the club will differ from traditional classroom learning.
+
+### Model
+
+```text
+LEARN
+   ↓
+EXPLORE
+   ↓
+BUILD
+   ↓
+SHARE
+   ↓
+CONTRIBUTE
+```
+
+### Suggested Learning Distribution
+
+**20% — Learn**
+
+Understand the technology.
+
+**30% — Explore**
+
+Experiment and break things.
+
+**40% — Build**
+
+Create real projects.
+
+**10% — Contribute**
+
+Give back to the community.
+
+The exact percentages can be adjusted later; the important principle is that the club emphasizes **hands-on learning**.
+
+---
+
+# 16. Section 10 — What You Will Build
+
+## Objective
+
+Make the outcome tangible.
+
+### Main Heading
+
+> **WHAT WILL YOU WALK AWAY WITH?**
+
+Display animated objects representing:
+
+### Skills
+
+Technical and problem-solving skills.
+
+### Projects
+
+Real things you built.
+
+### GitHub
+
+A stronger developer profile.
+
+### Contributions
+
+Real open-source activity.
+
+### Portfolio
+
+Evidence of practical work.
+
+### Community
+
+Connections with peers and developers.
+
+### Experience
+
+Industry-relevant workflows.
+
+### Final Statement
+
+> **Your experience becomes your portfolio.**
+
+---
+
+# 17. Section 11 — The FOSS Journey
+
+## Objective
+
+Create the emotional climax before the final section.
+
+### Large Interactive Journey
+
+```text
+CURIOUS
+   ↓
+LEARN
+   ↓
+EXPLORE
+   ↓
+BUILD
+   ↓
+COLLABORATE
+   ↓
+CONTRIBUTE
+   ↓
+LEAD
+```
+
+Each step should activate visually as the user progresses.
+
+The environment should become progressively more complex and connected.
+
+### Message
+
+> From learning technology
+> **to shaping technology.**
+
+---
+
+# 18. Section 12 — Final Call to Action
+
+## Objective
+
+End with a memorable statement.
+
+### Primary Statement
+
+> **DON'T JUST CONSUME TECHNOLOGY.**
+
+Then animate:
+
+> **SHAPE IT.**
+
+Followed by:
+
+# **WELCOME TO FOSS**
+
+### Supporting Line
+
+> Learn. Build. Collaborate. Contribute.
+
+Optional final CTA:
+
+> **Your first contribution could start today.**
+
+---
+
+# 19. Visual Design System
+
+## Overall Style
+
+The website should feel:
+
+* Futuristic
+* Premium
+* Technical
+* Minimal
+* Immersive
+* Energetic
+* Youth-oriented
+* Developer-focused
+
+### Inspiration
+
+Combine:
+
+**Apple-style storytelling**
+
+with
+
+**GitHub/open-source aesthetics**
+
+and
+
+**interactive 3D technology environments.**
+
+---
+
+# 20. Color Direction
+
+Recommended base palette:
+
+### Background
+
+Near-black / deep charcoal.
+
+### Primary
+
+White / off-white typography.
+
+### Accent
+
+Electric green or GitHub-inspired green.
+
+### Secondary Accents
+
+Subtle:
+
+* Cyan
+* Blue
+* Purple
+
+These should be used sparingly.
+
+The exact palette should remain consistent throughout the experience.
+
+---
+
+# 21. Typography
+
+Use modern, highly readable typography.
+
+Recommended hierarchy:
+
+### Display
+
+Large bold futuristic/modern sans-serif.
+
+### Body
+
+Clean modern sans-serif.
+
+### Technical
+
+Monospace font for:
+
+* Terminal
+* Code
+* Git commands
+* Technical labels
+
+Typography should be one of the major visual elements of the website.
+
+---
+
+# 22. 3D Design
+
+The 3D environment should support the storytelling rather than become decoration.
+
+Possible elements:
+
+* Git branches
+* Network nodes
+* Floating code fragments
+* Technology icons
+* Abstract geometric objects
+* Open-source ecosystem
+* Particles
+* Digital grids
+* Connected nodes
+* Terminal objects
+
+### Spline
+
+Spline can be used as the primary 3D design tool.
+
+The Spline scene should be treated as a visual reference/source for the major 3D environment.
+
+Complex 3D geometry should not be unnecessarily recreated using HTML/CSS.
+
+---
+
+# 23. Animation System
+
+Animations should be cinematic but purposeful.
+
+### Required Animation Types
+
+#### Entrance Animations
+
+Text and objects should enter progressively.
+
+#### Scroll Animations
+
+Sections should react to scroll position.
+
+#### Transformations
+
+Examples:
+
+```text
+CONSUMER → CONTRIBUTOR
+```
+
+and:
+
+```text
+CLASSROOM → REAL WORLD
+```
+
+#### Parallax
+
+Use subtle depth-based movement.
+
+#### Terminal Animation
+
+Typing-style commands.
+
+#### Node Animation
+
+Technology nodes should connect dynamically.
+
+#### Section Transitions
+
+Avoid abrupt jumps between sections.
+
+---
+
+# 24. Navigation
+
+The website should support presentation-style navigation.
+
+### Primary
+
+Mouse/trackpad scroll.
+
+### Keyboard
+
+```text
+↑
+↓
+Space
+```
+
+Optional:
+
+```text
+← →
+```
+
+### Progress Indicator
+
+A subtle side navigation can show:
+
+```text
+01 INTRO
+02 FOSS
+03 MINDSET
+04 TECHNOLOGY
+05 REAL WORLD
+06 RESPONSIBILITY
+07 CONTRIBUTION
+08 JOURNEY
+09 LEARNING
+10 OUTCOMES
+11 FINAL
+```
+
+The active section should be highlighted.
+
+---
+
+# 25. Responsive Design
+
+### Desktop
+
+Primary target.
+
+The website will be presented on:
+
+* Laptop
+* Desktop
+* Projector
+* Webinar screen
+
+### Tablet
+
+Maintain major interactions while simplifying some 3D elements.
+
+### Mobile
+
+Provide a simplified experience.
+
+On mobile:
+
+* Reduce 3D complexity
+* Reduce particle effects
+* Maintain storytelling
+* Maintain typography hierarchy
+* Maintain section navigation
+
+---
+
+# 26. Technical Architecture
+
+## Frontend
+
+**React**
+
+Recommended setup:
+
+* React
+* Vite
+* Tailwind CSS
+
+## Animation
+
+**GSAP**
+
+Use for:
+
+* Scroll-driven animations
+* Timeline animations
+* Text transitions
+* Section transitions
+* 3D scene synchronization
+
+Optional:
+
+**Framer Motion**
+
+Use only where it provides value for UI-level animations.
+
+Avoid unnecessarily mixing animation libraries.
+
+## 3D
+
+Primary:
+
+**Spline**
+
+Optional:
+
+**Three.js**
+
+Three.js should only be introduced where custom WebGL functionality is genuinely required.
+
+## Icons
+
+Use a consistent icon library rather than mixing unrelated icon styles.
+
+## Fonts
+
+Use a modern web font and a monospace font for technical content.
+
+---
+
+# 27. Component Architecture
+
+Suggested React structure:
+
+```text
+src/
+│
+├── components/
+│   ├── Navigation/
+│   ├── ProgressIndicator/
+│   ├── Terminal/
+│   ├── TechnologyNode/
+│   ├── TechnologyUniverse/
+│   ├── ContributionLadder/
+│   ├── JourneyRoadmap/
+│   ├── SectionTransition/
+│   └── SplineScene/
+│
+├── sections/
+│   ├── Hero/
+│   ├── WhatIsFOSS/
+│   ├── FOSSMindset/
+│   ├── TechnologyUniverse/
+│   ├── ClassroomToRealWorld/
+│   ├── ResponsibleOpenSource/
+│   ├── Contribution/
+│   ├── ClubJourney/
+│   ├── LearningModel/
+│   ├── Outcomes/
+│   ├── FOSSJourney/
+│   └── FinalCTA/
+│
+├── animations/
+│   ├── heroAnimations.js
+│   ├── scrollAnimations.js
+│   └── transitions.js
+│
+├── data/
+│   ├── technologies.js
+│   ├── journey.js
+│   └── content.js
+│
+└── App.jsx
+```
+
+The architecture should remain modular so individual sections can be changed without affecting the entire experience.
+
+---
+
+# 28. Performance Requirements
+
+Because the website contains 3D and animations, performance is critical.
+
+### Requirements
+
+* Lazy-load heavy 3D assets
+* Optimize images
+* Avoid unnecessarily large textures
+* Use compressed assets
+* Reduce particle count on weaker devices
+* Respect reduced-motion preferences
+* Avoid animation loops when sections are not visible
+* Lazy-load non-critical sections where appropriate
+* Maintain smooth scrolling
+* Avoid excessive DOM complexity
+
+### Target
+
+The desktop presentation should feel smooth and responsive during live use.
+
+---
+
+# 29. Accessibility
+
+Despite being highly visual, the website must remain accessible.
+
+Requirements:
+
+* Semantic HTML
+* Keyboard navigation
+* Readable contrast
+* Proper heading hierarchy
+* Alt text where applicable
+* Accessible interactive controls
+* Reduced-motion support
+* Avoid communicating essential information only through animation
+
+---
+
+# 30. Content Principles
+
+The website should **not copy the original document paragraphs directly onto the screen**.
+
+Instead:
+
+```text
+DOCUMENT
+   ↓
+CORE IDEA
+   ↓
+SHORT MESSAGE
+   ↓
+VISUAL
+   ↓
+INTERACTION
+```
+
+For example, instead of displaying:
+
+> “Start small: improve documentation, fix a bug, contribute code...”
+
+display:
+
+```text
+YOUR FIRST CONTRIBUTION
+
+📝 Documentation
+🐛 Bug Report
+💬 Discussion
+💻 Code
+🌍 Pull Request
+```
+
+The presenter can explain the details verbally.
+
+---
+
+# 31. Presentation Mode
+
+The website must work effectively as a live presentation.
+
+### Presentation Requirements
+
+* Full-screen friendly
+* Minimal browser-dependent controls
+* Clear section transitions
+* Keyboard navigation
+* Scroll snapping or controlled scroll progression where appropriate
+* High contrast for projectors
+* Animations should not require precise mouse interaction
+* Important content should remain visible from a distance
+
+### Optional Feature
+
+Add a hidden presentation mode activated by:
+
+```text
+P
+```
+
+This could:
+
+* Hide unnecessary UI
+* Enter fullscreen
+* Enable presentation navigation
+* Increase text scale where appropriate
+
+---
+
+# 32. Content Management
+
+All major text should be separated from component logic.
+
+Example:
+
+```javascript
+const journeyStages = [
+  {
+    title: "Explore",
+    description: "Discover technologies..."
+  },
+  {
+    title: "Build",
+    description: "Turn knowledge into projects..."
+  }
+];
+```
+
+This allows the club team to update content without rewriting components.
+
+---
+
+# 33. Success Metrics
+
+The website will be considered successful if:
+
+### Engagement
+
+Students remain visually engaged throughout the presentation.
+
+### Understanding
+
+Students understand that FOSS is more than free software.
+
+### Action
+
+Students understand practical ways to start contributing.
+
+### Club Awareness
+
+Students understand what the FOSS club will actually do.
+
+### Emotional Impact
+
+Students leave with the feeling:
+
+> **“I want to be part of this.”**
+
+---
+
+# 34. MVP Scope
+
+The first version should include:
+
+* Interactive hero
+* Terminal animation
+* FOSS definition section
+* FOSS mindset transformation
+* Interactive technology universe
+* Classroom → Real World animation
+* Responsible open-source section
+* Contribution ladder
+* Club roadmap
+* Learning model
+* Outcomes
+* Final CTA
+* Spline integration
+* GSAP animations
+* Keyboard/scroll navigation
+* Responsive layout
+
+---
+
+# 35. Future Enhancements
+
+After the welcome presentation, the same platform could evolve into the actual FOSS club website.
+
+Potential future modules:
+
+* Events
+* Workshops
+* Projects
+* GitHub repositories
+* Member profiles
+* Contributors wall
+* Open-source leaderboard
+* Hackathons
+* Learning resources
+* Blog
+* Community discussions
+* Contribution statistics
+* Project showcase
+
+The welcome experience should therefore be architected in a way that allows it to eventually become a broader FOSS community platform.
+
+---
+
+# 36. Final Product Statement
+
+The final website should communicate one simple idea:
+
+> **FOSS is not something you simply use. It is something you participate in.**
+
+The entire experience should take students through the transformation:
+
+```text
+TECHNOLOGY
+     ↓
+CURIOSITY
+     ↓
+EXPLORATION
+     ↓
+LEARNING
+     ↓
+BUILDING
+     ↓
+COLLABORATION
+     ↓
+CONTRIBUTION
+     ↓
+CREATION
+```
+
+### Final Brand Message
+
+# **DON'T JUST CONSUME TECHNOLOGY.**
+
+# **SHAPE IT.**
+
+**WELCOME TO FOSS.**
+
+---
+
+## 37. Development Principle
+
+The development team should prioritize:
+
+**Storytelling > Decoration**
+
+**Interaction > Static Content**
+
+**Purposeful Animation > Excessive Animation**
+
+**Performance > Visual Complexity**
+
+**Clarity > Information Density**
+
+**Real Experience > Template Design**
+
+The website should ultimately feel like **a journey through the open-source ecosystem**, not a website containing information about FOSS.

@@ -1,0 +1,905 @@
+# CLAUDE DESIGN RULES — FOSS INTERACTIVE EXPERIENCE
+
+## 01 — PRIMARY DESIGN PRINCIPLE
+
+The website must NOT look AI-generated.
+
+It must feel like a **professionally art-directed digital experience created by a senior product designer and creative developer**.
+
+Every visual decision must have a reason.
+
+Do not generate UI simply because a UI component is technically convenient.
+
+The design should prioritize:
+
+> **Editorial composition + interaction + typography + spatial depth + motion + visual storytelling**
+
+over:
+
+> cards + gradients + rounded containers + generic component libraries.
+
+---
+
+# 02 — ABSOLUTELY NO GENERIC AI UI
+
+Do NOT create designs that resemble common AI-generated websites.
+
+Avoid:
+
+* Generic SaaS dashboards
+* Generic landing pages
+* Repeated feature cards
+* Three-column card grids
+* Excessive rounded rectangles
+* Huge gradient blobs
+* Purple/blue AI gradients
+* Glassmorphism everywhere
+* Floating abstract blobs
+* Random glowing circles
+* Generic statistics sections
+* “Trusted by” logo strips
+* Fake testimonials
+* Generic CTA cards
+* Generic pricing-style layouts
+* Cookie-cutter hero sections
+* Excessive shadows
+* Excessive borders
+* Excessive pills
+* Random icons inside circles
+* Stock illustrations
+* Generic 3D blobs
+* Decorative elements without purpose
+
+If a component could appear unchanged on a random AI SaaS website, **do not use it**.
+
+---
+
+# 03 — NO “CARD EVERYTHING” DESIGN
+
+Do not turn every piece of information into a card.
+
+Cards should only exist when they provide a genuine interaction or grouping purpose.
+
+Bad:
+
+```text
+┌────────────┐
+│ Git        │
+│ Description│
+└────────────┘
+
+┌────────────┐
+│ Linux      │
+│ Description│
+└────────────┘
+
+┌────────────┐
+│ AI         │
+│ Description│
+└────────────┘
+```
+
+Preferred:
+
+Create a **spatial technology ecosystem** where Git, Linux, AI, Cloud and other technologies exist as connected elements in a larger environment.
+
+The interface should feel like an **environment**, not a dashboard.
+
+---
+
+# 04 — PREMIUM UI PRINCIPLE
+
+Premium design comes from:
+
+* Typography
+* Spacing
+* Composition
+* Restraint
+* Motion
+* Hierarchy
+* Consistency
+* High-quality interaction
+
+NOT from:
+
+* More gradients
+* More shadows
+* More rounded corners
+* More animations
+* More glowing effects
+
+When uncertain, choose the **simpler and more intentional option**.
+
+---
+
+# 05 — DESIGN WITH COMPOSITION, NOT COMPONENTS
+
+Do not begin every section by asking:
+
+> “Which component should I use?”
+
+Instead ask:
+
+> “What should the audience experience at this moment?”
+
+Each section should have a unique visual composition.
+
+For example:
+
+### FOSS Definition
+
+Don't use five cards.
+
+Instead:
+
+```text
+USE
+   \
+    STUDY
+      \
+       MODIFY
+          \
+           SHARE
+              \
+               CONTRIBUTE
+```
+
+Create a visual journey.
+
+---
+
+# 06 — EVERY SECTION NEEDS A VISUAL IDEA
+
+Before implementing a section, define:
+
+1. What is the message?
+2. What is the visual metaphor?
+3. What is the interaction?
+4. What is the transition?
+5. What should the audience remember?
+
+If a section only contains:
+
+> Heading + paragraph + cards
+
+it is probably not designed enough.
+
+---
+
+# 07 — USE VISUAL METAPHORS
+
+The website is about FOSS and technology.
+
+Use meaningful visual metaphors such as:
+
+* Git branches
+* Contribution graphs
+* Networks
+* Nodes
+* Code
+* Terminal environments
+* Version history
+* Connected systems
+* Dependency graphs
+* Repository structures
+* Pull requests
+* Open collaboration
+* Digital ecosystems
+
+Avoid meaningless decoration.
+
+Every decorative element should reinforce the concept.
+
+---
+
+# 08 — TYPOGRAPHY IS A PRIMARY DESIGN ELEMENT
+
+Do not treat typography as secondary.
+
+Use typography to create visual drama.
+
+Example:
+
+```text
+DON'T JUST
+
+CONSUME
+
+TECHNOLOGY.
+```
+
+Then:
+
+```text
+SHAPE IT.
+```
+
+Large typography can act as part of the visual composition.
+
+Use:
+
+* Large display typography
+* Tight hierarchy
+* Strong contrast
+* Monospace typography for technical elements
+* Carefully controlled line lengths
+
+Avoid excessive text.
+
+---
+
+# 09 — DO NOT OVERUSE ROUNDED CORNERS
+
+Rounded corners should not be the default.
+
+Avoid:
+
+```css
+border-radius: 24px;
+```
+
+on everything.
+
+Use a mixture of:
+
+* Sharp edges
+* Slight radius
+* Full radius only where interaction requires it
+
+The visual language should feel **technical and architectural**, not like a generic mobile app.
+
+---
+
+# 10 — NO EXCESSIVE GLASSMORPHISM
+
+Glass effects should be extremely limited.
+
+Do NOT make:
+
+* Navigation glass
+* Cards glass
+* Buttons glass
+* Sections glass
+* Modals glass
+* Backgrounds glass
+
+all at the same time.
+
+If glass is used, it must serve a specific visual purpose.
+
+---
+
+# 11 — COLOR DISCIPLINE
+
+Do not use random colors.
+
+Establish a controlled design system.
+
+Use:
+
+### Base
+
+Deep black / charcoal.
+
+### Primary
+
+Off-white / white.
+
+### Accent
+
+One primary technology accent.
+
+### Secondary
+
+One or two supporting accents only.
+
+Color should communicate:
+
+* interaction
+* hierarchy
+* state
+* technology
+* progression
+
+It should not simply make the interface “look cool.”
+
+---
+
+# 12 — NO RANDOM GRADIENTS
+
+Do not add gradients just because the design feels empty.
+
+Bad:
+
+```text
+purple → pink → blue → cyan
+```
+
+Use gradients only when they create:
+
+* depth
+* light
+* atmosphere
+* focus
+* spatial separation
+
+A gradient must have a design purpose.
+
+---
+
+# 13 — 3D MUST HAVE PURPOSE
+
+3D should not exist merely because:
+
+> “The website is supposed to be futuristic.”
+
+Every 3D element must contribute to the story.
+
+Examples:
+
+### Good
+
+A 3D Git ecosystem that evolves as the user moves through the FOSS journey.
+
+### Bad
+
+A random floating 3D sphere in the hero.
+
+### Good
+
+Technology nodes connecting as the concept of collaboration is introduced.
+
+### Bad
+
+Random floating cubes around the page.
+
+---
+
+# 14 — SPLINE IS A DESIGN ELEMENT, NOT A BACKGROUND
+
+If using Spline:
+
+Do not simply place a Spline scene behind text and call the page “3D”.
+
+The webpage should interact visually with the Spline scene.
+
+Possible relationships:
+
+```text
+Scroll
+ ↓
+Spline camera changes
+ ↓
+Technology nodes activate
+ ↓
+UI typography changes
+ ↓
+Next concept appears
+```
+
+The 3D environment should feel integrated with the narrative.
+
+---
+
+# 15 — MOTION MUST TELL THE STORY
+
+Never animate an element simply because animation is possible.
+
+Every animation should answer:
+
+> Why is this moving?
+
+Use motion for:
+
+* Progression
+* Transformation
+* Hierarchy
+* Cause and effect
+* Spatial relationships
+* Focus
+* Discovery
+
+Examples:
+
+```text
+CONSUMER
+   ↓
+transforms into
+   ↓
+EXPLORER
+```
+
+This is meaningful motion.
+
+Random floating cards are not.
+
+---
+
+# 16 — AVOID EXCESSIVE MICRO-ANIMATIONS
+
+Do not animate everything.
+
+If every:
+
+* icon
+* button
+* card
+* heading
+* paragraph
+* background
+* particle
+
+is moving simultaneously, the design becomes noisy.
+
+Use **visual silence**.
+
+Some elements should remain completely still.
+
+Contrast creates premium motion.
+
+---
+
+# 17 — USE SCROLL AS A STORYTELLING TOOL
+
+Scrolling should not simply move the page vertically.
+
+Use scroll to control:
+
+* Camera movement
+* Typography
+* Object positioning
+* Technology connections
+* Progression
+* Transformations
+* Scene changes
+
+The user should feel:
+
+> “I am moving through the FOSS ecosystem.”
+
+not:
+
+> “I am scrolling through a website.”
+
+---
+
+# 18 — CREATE DEPTH
+
+Use layers:
+
+```text
+BACKGROUND
+    ↓
+ATMOSPHERE
+    ↓
+3D ENVIRONMENT
+    ↓
+STRUCTURAL ELEMENTS
+    ↓
+TYPOGRAPHY
+    ↓
+INTERACTION
+```
+
+Avoid flat layouts where everything exists on the same visual plane.
+
+---
+
+# 19 — DON'T USE ICONS AS DECORATION
+
+Icons must represent real concepts.
+
+Good:
+
+Git icon → Git section
+
+Terminal icon → developer workflow
+
+Branch icon → contribution flow
+
+Bad:
+
+Random sparkle icon
+
+Random rocket icon
+
+Random lightning icon
+
+Random AI brain icon
+
+Use symbols only when they communicate meaning.
+
+---
+
+# 20 — DESIGN FOR A LARGE SCREEN
+
+This is primarily a **live presentation experience**.
+
+Design for:
+
+* 16:9 screens
+* Projectors
+* Large monitors
+* Webinar screen sharing
+
+Important information should be readable from a distance.
+
+Use:
+
+* Large typography
+* Strong contrast
+* Simple composition
+* Minimal text
+
+Avoid tiny UI.
+
+---
+
+# 21 — NO STOCK PHOTOS
+
+Do not use generic stock photographs unless specifically requested.
+
+The experience should be driven by:
+
+* typography
+* 3D
+* code
+* graphics
+* motion
+* abstract technology visualization
+
+The visual identity should belong to the FOSS experience.
+
+---
+
+# 22 — NO FAKE CONTENT
+
+Do not invent:
+
+* Statistics
+* Member counts
+* Achievements
+* Testimonials
+* Company partnerships
+* Event numbers
+* GitHub stars
+* Contributions
+* Awards
+
+If information is not provided, leave it out.
+
+---
+
+# 23 — NO FAKE “TECH COMPANY” LANGUAGE
+
+Avoid meaningless copy such as:
+
+> “Empowering the next generation through innovative solutions.”
+
+> “Unlock limitless possibilities.”
+
+> “Revolutionizing the digital ecosystem.”
+
+Use direct language.
+
+Prefer:
+
+> **Learn how the software works.**
+
+> **Build something real.**
+
+> **Collaborate with others.**
+
+> **Make your first contribution.**
+
+---
+
+# 24 — COPY SHOULD FEEL HUMAN
+
+The tone should be:
+
+* confident
+* technical
+* curious
+* youthful
+* direct
+
+Not:
+
+* corporate
+* overly inspirational
+* generic
+* marketing-heavy
+
+---
+
+# 25 — EACH SECTION MUST FEEL DIFFERENT
+
+Do not repeat the same layout.
+
+Avoid:
+
+```text
+Heading
+Paragraph
+3 Cards
+Button
+```
+
+on every section.
+
+Instead:
+
+### Section 1
+
+Full-screen cinematic hero.
+
+### Section 2
+
+Interactive flow.
+
+### Section 3
+
+Typography transformation.
+
+### Section 4
+
+3D ecosystem.
+
+### Section 5
+
+Visual comparison.
+
+### Section 6
+
+Interactive roadmap.
+
+### Section 7
+
+Contribution ladder.
+
+This creates rhythm.
+
+---
+
+# 26 — USE NEGATIVE SPACE
+
+Do not fill every empty area.
+
+Empty space is intentional.
+
+It creates:
+
+* focus
+* elegance
+* hierarchy
+* anticipation
+
+If a section feels too empty, do not immediately add another card.
+
+First evaluate:
+
+* typography size
+* positioning
+* scale
+* visual balance
+* composition
+
+---
+
+# 27 — DESIGN LIKE A CREATIVE DEVELOPER
+
+The implementation should combine:
+
+### Design thinking
+
+What should the user feel?
+
+### Interaction design
+
+What should the user do?
+
+### Motion design
+
+How should the experience evolve?
+
+### Engineering
+
+How can it remain performant?
+
+The goal is not simply:
+
+> “Make a beautiful React page.”
+
+The goal is:
+
+> **Build an interactive visual experience.**
+
+---
+
+# 28 — COMPONENT CREATION RULE
+
+Before creating a reusable component, ask:
+
+1. Does this interaction appear multiple times?
+2. Does abstraction improve maintainability?
+3. Does the component preserve the visual uniqueness of each section?
+
+Do NOT create generic components such as:
+
+```text
+FancyCard
+GlassCard
+GradientCard
+FeatureCard
+PremiumCard
+AnimatedCard
+```
+
+just to make development easier.
+
+Components should represent **real design concepts**.
+
+Good:
+
+```text
+TechnologyNode
+ContributionLadder
+JourneyStage
+TerminalSequence
+SplineScene
+SectionProgress
+```
+
+---
+
+# 29 — AVOID DESIGN SYSTEM OVER-ABSTRACTION
+
+Do not force every section into a rigid design system.
+
+A premium editorial experience needs controlled variation.
+
+Maintain consistency through:
+
+* typography
+* spacing
+* color
+* motion language
+* interaction principles
+
+not by making every section use the same component.
+
+---
+
+# 30 — DESIGN REVIEW BEFORE CODING
+
+Before implementing any major section, perform a visual review.
+
+Ask:
+
+### Question 1
+
+Could this section appear on a generic AI-generated website?
+
+If YES → redesign.
+
+### Question 2
+
+Does this section communicate a unique idea?
+
+If NO → redesign.
+
+### Question 3
+
+Is the visual metaphor connected to FOSS?
+
+If NO → redesign.
+
+### Question 4
+
+Does the animation have a purpose?
+
+If NO → remove it.
+
+### Question 5
+
+Is the section visually different from the previous section?
+
+If NO → redesign.
+
+---
+
+# 31 — THE “AI SLOP TEST”
+
+Before finalizing the page, inspect the entire experience.
+
+Reject the design if it contains excessive:
+
+* Rounded cards
+* Gradients
+* Glassmorphism
+* Floating blobs
+* Generic icons
+* Decorative sparkles
+* Random 3D objects
+* Repeated layouts
+* Excessive shadows
+* Huge text without purpose
+* Generic marketing copy
+* Empty sections
+* Template-like components
+
+The final result should look like something a **creative technology studio intentionally designed**, not something generated from a generic website prompt.
+
+---
+
+# 32 — PREMIUM DESIGN CHECKLIST
+
+Before considering the implementation complete:
+
+* [ ] Typography feels intentional
+* [ ] Spacing feels intentional
+* [ ] Every section has a distinct composition
+* [ ] No unnecessary cards
+* [ ] No generic SaaS patterns
+* [ ] No random gradients
+* [ ] No excessive glassmorphism
+* [ ] No meaningless 3D objects
+* [ ] No excessive animation
+* [ ] Motion communicates progression
+* [ ] 3D supports the narrative
+* [ ] Spline is integrated rather than simply embedded
+* [ ] Visual hierarchy is obvious
+* [ ] Content is concise
+* [ ] Large-screen presentation works
+* [ ] Mobile experience remains usable
+* [ ] Performance is acceptable
+* [ ] Accessibility is maintained
+
+---
+
+# 33 — FINAL CREATIVE DIRECTION
+
+The website should feel like:
+
+> **A digital exhibition about open-source technology.**
+
+Not:
+
+> A FOSS club landing page.
+
+It should feel closer to:
+
+**Interactive installation**
+
+*
+
+**Developer environment**
+
+*
+
+**Editorial storytelling**
+
+*
+
+**3D technology visualization**
+
+*
+
+**Premium product design**
+
+The audience should remember the **experience**, not the UI components.
+
+---
+
+# FINAL RULE
+
+### NEVER ASK:
+
+> “What component should I put here?”
+
+### ALWAYS ASK:
+
+> **“What should the audience experience here?”**
+
+Then design the interface around that answer.
