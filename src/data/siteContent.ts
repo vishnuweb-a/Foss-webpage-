@@ -21,10 +21,10 @@ export type ClubEvent = {
   format: string
   audience: string
   description: string
-  participation: string[]
   schedule: { day: string; title: string; items: string[] }[]
-  tracks: string[]
   outcomes: string[]
+  ctaLabel: string
+  ctaUrl?: string
   icon: JourneyStep['icon']
   tone: JourneyStep['tone']
 }
@@ -107,13 +107,12 @@ export const problems: Problem[] = [
 
 export const events: ClubEvent[] = [
   {
-    category: 'Online AI bootcamp + 24-hour buildathon',
-    title: 'Three Days of AI',
-    date: 'August 21–23, 2026',
-    format: 'Completely online · Beginner friendly',
+    category: 'Online AI bootcamp + beginner-friendly buildathon',
+    title: 'Four Days of AI',
+    date: 'August 24–27, 2026',
+    format: 'Completely online · Beginner-friendly buildathon',
     audience: 'Open to SRM students and other interested learners',
     description: 'Learn the foundations of AI, explore modern developer tools, form a team, and build an AI-powered project with mentor guidance.',
-    participation: ['150–300 registrations', '75–150 active participants', 'Teams of 2–4', '20–40 expected submissions'],
     schedule: [
       {
         day: 'Day 01',
@@ -123,16 +122,22 @@ export const events: ClubEvent[] = [
       {
         day: 'Day 02',
         title: 'Building with AI',
-        items: ['APIs and AI models', 'AI agents and automation', 'GitHub Copilot and assisted development', 'Ideation, team formation and buildathon kickoff'],
+        items: ['APIs and AI models', 'AI agents and automation', 'GitHub Copilot and assisted development', 'Project ideation and team formation'],
       },
       {
         day: 'Day 03',
-        title: 'Buildathon & Demo Day',
-        items: ['Mentor office hours', 'Project checkpoint and final submission', 'Project presentations and judging', 'Feedback, winners and next steps'],
+        title: 'Beginner Buildathon',
+        items: ['Buildathon kickoff and project setup', 'Mentor office hours and technical support', 'Guided project building', 'Progress checkpoint and final submission'],
+      },
+      {
+        day: 'Day 04',
+        title: 'Pitching & Demo Day',
+        items: ['Pitch preparation', 'Project demonstrations', 'Judging and constructive feedback', 'Winner announcement and next steps'],
       },
     ],
-    tracks: ['Education', 'Healthcare & Well-being', 'Accessibility', 'Sustainability', 'Productivity', 'Campus Life', 'Open Innovation'],
     outcomes: ['Build a practical AI project', 'Learn collaborative development', 'Receive mentor feedback', 'Present a working submission'],
+    ctaLabel: 'Apply here',
+    ctaUrl: 'https://forms.gle/TW9pS4X9vsPNYjYWA',
     icon: 'learn',
     tone: 'blue',
   },
@@ -143,7 +148,6 @@ export const events: ClubEvent[] = [
     format: 'In person · Three-day hackathon',
     audience: 'Hosted at SRM University Delhi-NCR, Sonepat',
     description: 'Build practical AI solutions in multidisciplinary teams with technical, product, design, GitHub, and deployment support.',
-    participation: ['100–150 participants', 'Teams of 2–4', '25–40 participating teams', 'Mentors, judges and student volunteers'],
     schedule: [
       {
         day: 'Day 01',
@@ -161,8 +165,8 @@ export const events: ClubEvent[] = [
         items: ['Final development and submission', 'Technical screening', 'Project demonstrations and jury evaluation', 'Awards, certificates and closing ceremony'],
       },
     ],
-    tracks: ['Education', 'Smart Cities', 'Social Impact', 'Sustainability', 'Healthcare', 'Developer Productivity', 'Open Innovation'],
     outcomes: ['Build a practical AI solution', 'Collaborate across disciplines', 'Learn from mentors and professionals', 'Showcase work to faculty and judges'],
+    ctaLabel: 'Stay tuned',
     icon: 'grow',
     tone: 'orange',
   },

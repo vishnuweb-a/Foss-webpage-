@@ -1,5 +1,5 @@
 import { DoodleIcon } from '@/components/DoodleIcon'
-import { events, links } from '@/data/siteContent'
+import { events } from '@/data/siteContent'
 
 export function EventsSection() {
   return (
@@ -38,13 +38,9 @@ export function EventsSection() {
               </dl>
             </div>
 
-            <div className="event-participation" aria-label={`${event.title} proposed participation`}>
-              {event.participation.map((item) => <span key={item}>{item}</span>)}
-            </div>
-
             <div className="event-schedule">
-              <div className="event-subheading"><span>Program</span><b>Three days from learning to demo</b></div>
-              <div className="schedule-grid">
+              <div className="event-subheading"><span>Program</span><b>{event.schedule.length} days from learning to demo</b></div>
+              <div className={`schedule-grid ${event.schedule.length === 4 ? 'schedule-grid--four' : ''}`}>
                 {event.schedule.map((day) => (
                   <section key={day.day}>
                     <span>{day.day}</span>
@@ -55,22 +51,22 @@ export function EventsSection() {
               </div>
             </div>
 
-            <div className="event-bottom">
-              <div>
-                <div className="event-subheading"><span>Build tracks</span></div>
-                <div className="event-tracks">{event.tracks.map((track) => <span key={track}>{track}</span>)}</div>
-              </div>
-              <div>
-                <div className="event-subheading"><span>What you’ll gain</span></div>
-                <ul className="event-outcomes">{event.outcomes.map((outcome) => <li key={outcome}>{outcome}</li>)}</ul>
-              </div>
+            <div className="event-gains">
+              <div className="event-subheading"><span>What you’ll gain</span></div>
+              <ul className="event-outcomes">{event.outcomes.map((outcome) => <li key={outcome}>{outcome}</li>)}</ul>
             </div>
 
             <footer className="event-footer">
               <p>Registration details and participant handbooks will be shared with the community.</p>
-              <a className="sketch-button" href={links.whatsapp} target="_blank" rel="noreferrer" aria-label={`Join the community for ${event.title} updates`}>
-                Get event updates <span>↗</span>
-              </a>
+              {event.ctaUrl ? (
+                <a className="sketch-button" href={event.ctaUrl} target="_blank" rel="noreferrer" aria-label={`Apply for ${event.title}`}>
+                  {event.ctaLabel} <span>↗</span>
+                </a>
+              ) : (
+                <button className="sketch-button event-cta-disabled" type="button" disabled>
+                  {event.ctaLabel}
+                </button>
+              )}
             </footer>
           </article>
         ))}
