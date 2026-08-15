@@ -7,25 +7,71 @@ export function EventsSection() {
       <header className="section-heading section-heading--split">
         <div>
           <span className="section-number">02 · Events & activities</span>
-          <h2>Learn by doing,<br /><span className="marker-underline">together.</span></h2>
+          <h2>Two launches.<br /><span className="marker-underline">One builder journey.</span></h2>
         </div>
-        <p>Practical sessions designed to turn curiosity into confidence, one small win at a time.</p>
+        <p>
+          Start online with the fundamentals, ship your first AI project, then come
+          together on campus for a three-day hackathon.
+        </p>
       </header>
 
       <div className="event-list">
         {events.map((event, index) => (
           <article className={`event-card event-card--${event.tone}`} key={event.title}>
-            <span className="event-index">0{index + 1}</span>
-            <DoodleIcon name={event.icon} size="small" />
-            <div className="event-main">
-              <span className="event-category">{event.category}</span>
-              <h3>{event.title}</h3>
-              <p>{event.description}</p>
+            <header className="event-card-header">
+              <div className="event-identity">
+                <span className="event-index">0{index + 1}</span>
+                <DoodleIcon name={event.icon} size="small" />
+                <div>
+                  <span className="event-category">{event.category}</span>
+                  <h3>{event.title}</h3>
+                </div>
+              </div>
+              <div className="event-date"><span>Save the date</span><strong>{event.date}</strong></div>
+            </header>
+
+            <div className="event-overview">
+              <p className="event-description">{event.description}</p>
+              <dl className="event-facts">
+                <div><dt>Format</dt><dd>{event.format}</dd></div>
+                <div><dt>Who can join</dt><dd>{event.audience}</dd></div>
+              </dl>
             </div>
-            <div className="event-takeaway"><b>You’ll leave with</b><span>{event.takeaway}</span></div>
-            <a href={links.whatsapp} target="_blank" rel="noreferrer" aria-label={`Register interest in ${event.title}`}>
-              I’m interested <span>↗</span>
-            </a>
+
+            <div className="event-participation" aria-label={`${event.title} proposed participation`}>
+              {event.participation.map((item) => <span key={item}>{item}</span>)}
+            </div>
+
+            <div className="event-schedule">
+              <div className="event-subheading"><span>Program</span><b>Three days from learning to demo</b></div>
+              <div className="schedule-grid">
+                {event.schedule.map((day) => (
+                  <section key={day.day}>
+                    <span>{day.day}</span>
+                    <h4>{day.title}</h4>
+                    <ul>{day.items.map((item) => <li key={item}>{item}</li>)}</ul>
+                  </section>
+                ))}
+              </div>
+            </div>
+
+            <div className="event-bottom">
+              <div>
+                <div className="event-subheading"><span>Build tracks</span></div>
+                <div className="event-tracks">{event.tracks.map((track) => <span key={track}>{track}</span>)}</div>
+              </div>
+              <div>
+                <div className="event-subheading"><span>What you’ll gain</span></div>
+                <ul className="event-outcomes">{event.outcomes.map((outcome) => <li key={outcome}>{outcome}</li>)}</ul>
+              </div>
+            </div>
+
+            <footer className="event-footer">
+              <p>Registration details and participant handbooks will be shared with the community.</p>
+              <a className="sketch-button" href={links.whatsapp} target="_blank" rel="noreferrer" aria-label={`Join the community for ${event.title} updates`}>
+                Get event updates <span>↗</span>
+              </a>
+            </footer>
           </article>
         ))}
       </div>

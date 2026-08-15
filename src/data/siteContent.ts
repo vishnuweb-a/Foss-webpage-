@@ -17,8 +17,14 @@ export type Problem = {
 export type ClubEvent = {
   category: string
   title: string
+  date: string
+  format: string
+  audience: string
   description: string
-  takeaway: string
+  participation: string[]
+  schedule: { day: string; title: string; items: string[] }[]
+  tracks: string[]
+  outcomes: string[]
   icon: JourneyStep['icon']
   tone: JourneyStep['tone']
 }
@@ -101,34 +107,62 @@ export const problems: Problem[] = [
 
 export const events: ClubEvent[] = [
   {
-    category: 'Start here',
-    title: 'Open Source 101',
-    description: 'A friendly introduction to FOSS, licenses, communities, and contributor culture.',
-    takeaway: 'Leave knowing what open source is and where you fit in.',
+    category: 'Online AI bootcamp + 24-hour buildathon',
+    title: 'Three Days of AI',
+    date: 'August 21–23, 2026',
+    format: 'Completely online · Beginner friendly',
+    audience: 'Open to SRM students and other interested learners',
+    description: 'Learn the foundations of AI, explore modern developer tools, form a team, and build an AI-powered project with mentor guidance.',
+    participation: ['150–300 registrations', '75–150 active participants', 'Teams of 2–4', '20–40 expected submissions'],
+    schedule: [
+      {
+        day: 'Day 01',
+        title: 'AI Foundations',
+        items: ['FOSS, Git and GitHub', 'AI, machine learning and generative AI', 'Responsible and ethical AI', 'Tools, platforms and Q&A'],
+      },
+      {
+        day: 'Day 02',
+        title: 'Building with AI',
+        items: ['APIs and AI models', 'AI agents and automation', 'GitHub Copilot and assisted development', 'Ideation, team formation and buildathon kickoff'],
+      },
+      {
+        day: 'Day 03',
+        title: 'Buildathon & Demo Day',
+        items: ['Mentor office hours', 'Project checkpoint and final submission', 'Project presentations and judging', 'Feedback, winners and next steps'],
+      },
+    ],
+    tracks: ['Education', 'Healthcare & Well-being', 'Accessibility', 'Sustainability', 'Productivity', 'Campus Life', 'Open Innovation'],
+    outcomes: ['Build a practical AI project', 'Learn collaborative development', 'Receive mentor feedback', 'Present a working submission'],
     icon: 'learn',
     tone: 'blue',
   },
   {
-    category: 'Hands-on workshop',
-    title: 'Git & GitHub Lab',
-    description: 'Learn branches, commits, issues, pull requests, and reviews by doing them together.',
-    takeaway: 'Leave with a repository and a practical workflow.',
-    icon: 'build',
-    tone: 'green',
-  },
-  {
-    category: 'Contribution day',
-    title: 'First PR Sprint',
-    description: 'Choose a welcoming repository, understand an issue, and submit a useful change.',
-    takeaway: 'Leave with your first genuine open-source contribution.',
-    icon: 'contribute',
-    tone: 'purple',
-  },
-  {
-    category: 'Build together',
-    title: 'Project & Hack Nights',
-    description: 'Form a team around a real problem, prototype openly, and learn through collaboration.',
-    takeaway: 'Leave with momentum, teammates, and something you built.',
+    category: 'In-person AI hackathon',
+    title: 'HackAI by SRM',
+    date: 'September 25–27, 2026',
+    format: 'In person · Three-day hackathon',
+    audience: 'Hosted at SRM University Delhi-NCR, Sonepat',
+    description: 'Build practical AI solutions in multidisciplinary teams with technical, product, design, GitHub, and deployment support.',
+    participation: ['100–150 participants', 'Teams of 2–4', '25–40 participating teams', 'Mentors, judges and student volunteers'],
+    schedule: [
+      {
+        day: 'Day 01',
+        title: 'Opening & Kick-off',
+        items: ['Registration and opening ceremony', 'FOSS and HackAI introduction', 'Problem statements, tracks and rules', 'Team formation, validation and hackathon start'],
+      },
+      {
+        day: 'Day 02',
+        title: 'Building & Mentorship',
+        items: ['Full project-building day', 'Technical, product and design mentorship', 'GitHub and deployment support', 'Progress checkpoints and project feedback'],
+      },
+      {
+        day: 'Day 03',
+        title: 'Submission & Demo Day',
+        items: ['Final development and submission', 'Technical screening', 'Project demonstrations and jury evaluation', 'Awards, certificates and closing ceremony'],
+      },
+    ],
+    tracks: ['Education', 'Smart Cities', 'Social Impact', 'Sustainability', 'Healthcare', 'Developer Productivity', 'Open Innovation'],
+    outcomes: ['Build a practical AI solution', 'Collaborate across disciplines', 'Learn from mentors and professionals', 'Showcase work to faculty and judges'],
     icon: 'grow',
     tone: 'orange',
   },
