@@ -24,11 +24,18 @@ export type ClubEvent = {
 }
 
 export const navigation = [
-  { label: 'Home', href: '#home' },
-  { label: 'About', href: '#about' },
-  { label: 'Events', href: '#events' },
-  { label: 'Community', href: '#community' },
+  { label: 'Home', href: '/' },
+  { label: 'About', href: '/about' },
+  { label: 'Events & Activities', href: '/events' },
+  { label: 'Community', href: '/community' },
 ] as const
+
+export const links = {
+  whatsapp: 'https://chat.whatsapp.com/JBZ3Vw2w34DEmwyL9NU6qT',
+  instagram: 'https://instagram.com/srmuniversitydelhincrsnp',
+  linkedin: 'https://in.linkedin.com/school/srm-university-haryana/',
+  codeOfConduct: '/code-of-conduct',
+} as const
 
 export const journeySteps: JourneyStep[] = [
   {

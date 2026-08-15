@@ -1,5 +1,5 @@
 import { DoodleIcon } from '@/components/DoodleIcon'
-import { events } from '@/data/siteContent'
+import { events, links } from '@/data/siteContent'
 
 export function EventsSection() {
   return (
@@ -23,7 +23,9 @@ export function EventsSection() {
               <p>{event.description}</p>
             </div>
             <div className="event-takeaway"><b>You’ll leave with</b><span>{event.takeaway}</span></div>
-            <a href="#join" aria-label={`Register interest in ${event.title}`}>I’m interested <span>↗</span></a>
+            <a href={links.whatsapp} target="_blank" rel="noreferrer" aria-label={`Register interest in ${event.title}`}>
+              I’m interested <span>↗</span>
+            </a>
           </article>
         ))}
       </div>
