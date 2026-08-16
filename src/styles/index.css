@@ -296,3 +296,170 @@ button { color: inherit; }
 }
 
 @media (prefers-reduced-motion: reduce) { :root { scroll-behavior: auto; } *,*::before,*::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
+
+/* ==========================================================================
+   THE INTERACTIVE JOURNEY  (route: /journey)
+   ==========================================================================
+
+   Everything below belongs to the twelve-scene presentation, not to the club
+   site above. The two design systems share this stylesheet but never overlap:
+
+   - The @theme block only *generates Tailwind utilities* (bg-void, text-hero,
+     stage-x ...). The club site styles itself with semantic classes and uses
+     none of them, so these tokens cannot alter it.
+   - Anything that would style the page globally — background, colour, the
+     paper grain, smooth scrolling — is scoped to html[data-journey], which
+     JourneyExperience sets on mount and removes on unmount.
+
+   Two tokens: Space Grotesk descends from Space Mono, so the display voice and
+   the terminal voice are relatives rather than strangers (rules.prd §01).
+   Colour is a state machine, not decoration (rules.prd §11).
+*/
+@theme {
+  /* === Surfaces: four steps of depth, no gradients (rules.prd §18) === */
+  --color-void: oklch(0.145 0.008 265);
+  --color-surface: oklch(0.185 0.009 265);
+  --color-surface-raised: oklch(0.225 0.01 265);
+  --color-rule: oklch(0.32 0.012 265);
+  --color-rule-bright: oklch(0.45 0.015 265);
+
+  /* === Ink === */
+  --color-ink: oklch(0.97 0.003 265);
+  --color-ink-dim: oklch(0.75 0.008 265);
+  --color-ink-faint: oklch(0.55 0.01 265);
+
+  /* === The single accent: open-source green === */
+  --color-accent: oklch(0.79 0.19 148);
+  --color-accent-deep: oklch(0.62 0.16 148);
+  --color-accent-wash: oklch(0.38 0.08 148);
+
+  /* === Supporting cool tone: strictly "not yet reached" === */
+  --color-dormant: oklch(0.6 0.045 235);
+  --color-dormant-deep: oklch(0.42 0.035 235);
+
+  /* === Fluid type. Sized for a projector at the back of a lecture hall. === */
+  --text-hero: clamp(3rem, 1.2rem + 7.6vw, 9.5rem);
+  --text-display: clamp(2.25rem, 1.1rem + 5vw, 6rem);
+  --text-title: clamp(1.5rem, 1rem + 2.4vw, 3.25rem);
+  --text-lead: clamp(1.0625rem, 0.92rem + 0.8vw, 1.625rem);
+  --text-body: clamp(0.9375rem, 0.9rem + 0.28vw, 1.125rem);
+  --text-label: clamp(0.6875rem, 0.65rem + 0.17vw, 0.8125rem);
+
+  /* Negative tracking at display sizes — the one Apple principle worth taking. */
+  --tracking-display: -0.03em;
+  --tracking-tight: -0.015em;
+  --tracking-label: 0.18em;
+
+  --font-display: 'Space Grotesk Variable', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono Variable', ui-monospace, monospace;
+
+  /* Radius stays near-zero on purpose (rules.prd §09). */
+  --radius-none: 0px;
+  --radius-xs: 2px;
+  --radius-sm: 3px;
+
+  --spacing-gutter: clamp(1.25rem, 0.5rem + 3.5vw, 6rem);
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-quint: cubic-bezier(0.83, 0, 0.17, 1);
+
+  /* The only looping animation in the experience: a terminal cursor, which is
+     the one element where perpetual motion is literal rather than decorative. */
+  --animate-blink: blink 1.06s steps(2, start) infinite;
+
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+}
+
+/* --- Journey-only page surface. Scoped so the club site is untouched. --- */
+html[data-journey] {
+  background-color: var(--color-void);
+  /* Scroll is driven by GSAP. The club site's `scroll-behavior: smooth` on
+     :root fights ScrollToPlugin, leaving keyboard navigation animated twice
+     and overshooting. */
+  scroll-behavior: auto;
+}
+
+html[data-journey] body {
+  background-color: var(--color-void);
+  color: var(--color-ink);
+  font-family: var(--font-display);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* The club site's paper grain sits at z-index 1000 and would cover the scenes. */
+html[data-journey] body::before {
+  display: none;
+}
+
+html[data-journey] ::selection {
+  background-color: var(--color-accent);
+  color: var(--color-void);
+}
+
+html[data-journey] :focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+/* Presentation mode drops the ambient presenter affordances so only the
+   content is on screen (FOSS.prd §31). The progress rail stays: a presenter
+   needs to know where they are. */
+html[data-presenting='true'] [data-hint] {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Essential content must never be animation-gated (FOSS.prd §29). Reduced
+   motion collapses every timeline to its final frame rather than hiding it. */
+@media (prefers-reduced-motion: reduce) {
+  html[data-journey] *,
+  html[data-journey] *::before,
+  html[data-journey] *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Screen-reader-only, used for the heading spine that keeps the document
+   outline intact even where headings are rendered as spatial typography. */
+@utility sr-only-spine {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/*
+  Horizontal padding for every scene stage.
+
+  On wide screens the right side reserves the progress rail's column, so long
+  words like CONTRIBUTE can never run underneath the navigation.
+*/
+@utility stage-x {
+  padding-inline: var(--spacing-gutter);
+
+  @media (width >= 64rem) {
+    padding-right: calc(var(--spacing-gutter) + 9.5rem);
+  }
+}
+
+/* A hairline that reads as a technical rule, not a card border. */
+@utility rule-h {
+  background-image: linear-gradient(
+    to right,
+    var(--color-rule) 0%,
+    var(--color-rule) 100%
+  );
+  height: 1px;
+}

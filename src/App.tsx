@@ -5,6 +5,7 @@ import { CommunitySection } from '@/components/CommunitySection'
 import { EventsSection } from '@/components/EventsSection'
 import { HeroSection } from '@/components/HeroSection'
 import { JoinSection } from '@/components/JoinSection'
+import { JourneyExperience } from '@/components/JourneyExperience'
 import { ProblemSection } from '@/components/ProblemSection'
 import { SiteFooter } from '@/components/SiteFooter'
 import { SiteHeader } from '@/components/SiteHeader'
@@ -15,6 +16,7 @@ const pageTitles: Record<string, string> = {
   '/events': 'Events & Activities · FOSS Club',
   '/community': 'Community · FOSS Club',
   '/code-of-conduct': 'Code of Conduct · FOSS Club',
+  '/journey': 'Welcome to FOSS · An interactive journey',
 }
 
 function CurrentPage({ path }: { path: string }) {
@@ -32,6 +34,10 @@ export default function App() {
     document.title = pageTitles[path] ?? pageTitles['/']
     window.scrollTo(0, 0)
   }, [path])
+
+  /* The journey is a full-screen presentation, so it renders outside the site
+     shell entirely — the fixed header would otherwise sit over every scene. */
+  if (path === '/journey') return <JourneyExperience />
 
   return (
     <div className={`site-shell page-${path === '/' ? 'home' : path.slice(1)}`}>

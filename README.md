@@ -27,7 +27,26 @@
 
 <br>
 
-## What this is
+## Two experiences, one app
+
+| Route | What it is |
+|:--|:--|
+| `/` `·` `/about` `·` `/events` `·` `/community` | The club website — pages, events, community |
+| **`/journey`** | The twelve-scene interactive presentation *(pictured above)* |
+
+They share a stylesheet but never collide. The journey's dark design system is
+scoped to `html[data-journey]`, a flag set in
+[`main.tsx`](src/main.tsx) before React renders, so the club site's paper
+palette, grain overlay and smooth scrolling never reach it — and its Tailwind
+tokens only generate utility classes the club site doesn't use.
+
+<br>
+
+---
+
+<br>
+
+## The journey
 
 Not a website about FOSS. A guided journey through it.
 
@@ -81,7 +100,7 @@ Built against three documents in [`docs/`](docs/):
 
 ```bash
 npm install
-npm run dev          # http://localhost:5173
+npm run dev          # http://localhost:5173  (journey: /journey)
 npm run build        # production build into dist/
 npm run typecheck
 ```

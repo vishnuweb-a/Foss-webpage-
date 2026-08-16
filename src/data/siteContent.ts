@@ -34,6 +34,7 @@ export const navigation = [
   { label: 'About', href: '/about' },
   { label: 'Events & Activities', href: '/events' },
   { label: 'Community', href: '/community' },
+  { label: 'Journey', href: '/journey' },
 ] as const
 
 export const links = {
