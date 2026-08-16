@@ -314,8 +314,3 @@ export const finale = {
   support: 'Learn. Build. Collaborate. Contribute.',
   cta: 'Your first contribution could start today.',
 } as const
-
-export const studentCoordinators = {
-  label: 'STUDENT COORDINATORS',
-  names: ['VISHNU BHARDWAJ', 'MAITREYI'],
-} as const

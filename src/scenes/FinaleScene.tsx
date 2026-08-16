@@ -1,7 +1,7 @@
 import { useCallback } from 'react'
 import { gsap } from '@/motion/gsap'
 import { Scene, type SceneBuild } from '@/components/Scene'
-import { brand, finale, studentCoordinators } from '@/data/content'
+import { brand, finale } from '@/data/content'
 import type { SceneProps } from '@/scenes/types'
 
 /**
@@ -18,7 +18,7 @@ export function FinaleScene({ def, index }: SceneProps) {
       // Only the arrival is shown. Revealing all three stacked layers at once
       // would leave them overlapping and unreadable.
       gsap.set('[data-statement], [data-turn]', { autoAlpha: 0 })
-      gsap.set('[data-welcome], [data-support], [data-cta], [data-coordinator]', {
+      gsap.set('[data-welcome], [data-support], [data-cta]', {
         autoAlpha: 1,
         y: 0,
       })
@@ -55,12 +55,6 @@ export function FinaleScene({ def, index }: SceneProps) {
       { autoAlpha: 0 },
       { autoAlpha: 1, ease: 'none' },
       0.84,
-    )
-    tl.fromTo(
-      '[data-coordinator]',
-      { autoAlpha: 0, y: 14 },
-      { autoAlpha: 1, y: 0, ease: 'none' },
-      0.9,
     )
   }, [])
 
@@ -113,23 +107,6 @@ export function FinaleScene({ def, index }: SceneProps) {
             >
               {finale.cta}
             </p>
-
-            {/* Lands last, inside the arrival — a closing credit, not a footer. */}
-            <div data-coordinator className="mt-[5svh] opacity-0">
-              <p className="text-ink-faint font-mono text-label tracking-label">
-                {studentCoordinators.label}
-              </p>
-              <div className="mt-2 flex flex-col gap-1">
-                {studentCoordinators.names.map((name) => (
-                  <p
-                    key={name}
-                    className="text-ink font-display text-title font-bold leading-none tracking-tight"
-                  >
-                    {name}
-                  </p>
-                ))}
-              </div>
-            </div>
           </div>
         </div>
       </div>
