@@ -10,6 +10,14 @@ const studentBenefits = [
   ['Demo-day confidence', 'Practice presenting your problem, solution, product decisions, and working demo.'],
 ]
 
+const speaker = {
+  name: 'Bhawna Chauhan',
+  role: 'DevRel Engineer & creative all-rounder at Superplane',
+  bio: 'Bhawna builds developer-focused products, explains complex technology in a practical way, and helps developers succeed with the tools they use. She is also building Swarmbase as its founding engineer and has worked across AI, developer tooling, open source, and community programs.',
+  highlights: ['Founding Engineer at Swarmbase', 'GitHub Campus Expert', '20+ hackathon wins', 'MLH Top 50 Hacker'],
+  linkedin: 'https://www.linkedin.com/in/pixawna/',
+}
+
 export function FourDaysOfAIPage() {
   const event = events.find((item) => item.title === 'Four Days of AI')
   if (!event) return null
@@ -20,7 +28,7 @@ export function FourDaysOfAIPage() {
 
       <header className="ai-event-hero">
         <div className="ai-event-title">
-          <span className="section-number">Free online AI program · Beginner friendly</span>
+          <span className="section-number">Free AI program · Beginner friendly</span>
           <h1>Four Days<br />of <span className="marker-underline">AI.</span></h1>
           <p>{event.description}</p>
           <div className="ai-event-actions">
@@ -42,7 +50,7 @@ export function FourDaysOfAIPage() {
 
       <div className="ai-event-quick-facts" aria-label="Event highlights">
         <div><span>₹0</span><p><b>Completely free</b>No application or participation fee</p></div>
-        <div><span>100%</span><p><b>Online</b>Join from wherever you are</p></div>
+        <div><span>TBA</span><p><b>Program format</b>Delivery details will be announced soon</p></div>
         <div><span>01</span><p><b>Beginner buildathon</b>Guided from idea to working project</p></div>
         <div><span>04</span><p><b>Focused days</b>Learn, build, pitch, and grow</p></div>
       </div>
@@ -61,6 +69,26 @@ export function FourDaysOfAIPage() {
               <p>{copy}</p>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="ai-speaker">
+        <div className="ai-speaker-intro">
+          <span className="section-number">Meet your speaker</span>
+          <div className="speaker-monogram" aria-hidden="true">BC</div>
+          <p>Learn from someone whose own journey began with hackathons and open source.</p>
+        </div>
+        <div className="ai-speaker-profile">
+          <span>Speaker · Four Days of AI</span>
+          <h2>{speaker.name}</h2>
+          <strong>{speaker.role}</strong>
+          <p>{speaker.bio}</p>
+          <div className="speaker-highlights">
+            {speaker.highlights.map((highlight) => <span key={highlight}>{highlight}</span>)}
+          </div>
+          <a className="plain-link" href={speaker.linkedin} target="_blank" rel="noreferrer">
+            View LinkedIn profile <span>↗</span>
+          </a>
         </div>
       </section>
 

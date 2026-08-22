@@ -110,11 +110,11 @@ export const problems: Problem[] = [
 
 export const events: ClubEvent[] = [
   {
-    category: 'Online AI bootcamp + beginner-friendly buildathon',
+    category: 'AI bootcamp + beginner-friendly buildathon',
     title: 'Four Days of AI',
     date: 'Coming soon',
     dateNote: 'Tentatively scheduled for the first week of September 2026',
-    format: 'Completely online · Beginner-friendly buildathon',
+    format: 'Format will be announced soon',
     audience: 'Open to SRM students and other interested learners',
     description: 'Learn the foundations of AI, explore modern developer tools, form a team, and build an AI-powered project with mentor guidance.',
     schedule: [

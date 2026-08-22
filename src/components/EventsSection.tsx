@@ -10,8 +10,8 @@ export function EventsSection() {
           <h2>Two launches.<br /><span className="marker-underline">One builder journey.</span></h2>
         </div>
         <p>
-          Start online with the fundamentals, ship your first AI project, then come
-          together on campus for a three-day hackathon.
+          Start with the fundamentals, ship your first AI project, then keep building
+          through guided programs and community hackathons.
         </p>
       </header>
 
