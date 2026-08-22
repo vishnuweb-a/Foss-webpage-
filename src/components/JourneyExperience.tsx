@@ -24,7 +24,7 @@ const hackAI = events.find((event) => event.title === 'HackAI by SRM')
 const journeyMilestones = [
   {
     phase: 'Chapter 01 · The beginning',
-    date: '13 September 2026',
+    date: '13 August 2026',
     title: 'FOSS Club Inauguration',
     copy: 'The day the idea became a community. Students and faculty came together to open a space for learning, building, contributing, and growing in public.',
     status: 'We started here',
@@ -91,6 +91,8 @@ export function JourneyExperience() {
 
       <main id="journey-story">
         <section className="club-journey-hero">
+          <a className="journey-back-home" href="/">← Back to the main home page</a>
+
           <div className="journey-hero-copy">
             <span className="journey-eyebrow">Our story is just getting started</span>
             <h1>From one room<br />to an <em>open-source</em><br />movement.</h1>
@@ -104,7 +106,7 @@ export function JourneyExperience() {
           <div className="journey-hero-postcard" aria-label="The first milestone">
             <span>Chapter 01</span>
             <DoodleIcon name="contribute" />
-            <strong>13·09·2026</strong>
+            <strong>13·08·2026</strong>
             <p>The day FOSS Club opened its doors.</p>
             <small>SRM University Delhi-NCR, Sonepat</small>
           </div>
@@ -117,7 +119,7 @@ export function JourneyExperience() {
 
         <section className="journey-beginning" id="our-beginning">
           <header className="journey-section-heading">
-            <span>13 September 2026 · Where it began</span>
+            <span>13 August 2026 · Where it began</span>
             <h2>A room full of curious people.<br /><em>One shared beginning.</em></h2>
             <p>
               The inauguration brought students, faculty, and builders together to
@@ -129,14 +131,14 @@ export function JourneyExperience() {
             {inaugurationPhotos.map((photo, index) => (
               <figure className={`journey-photo journey-photo--${photo.size}`} key={photo.src}>
                 <img src={photo.src} alt={photo.alt} loading={index > 1 ? 'lazy' : 'eager'} />
-                <figcaption><span>0{index + 1}</span>{index === 0 ? 'The room where our story began' : 'A moment from launch day'}</figcaption>
+                <figcaption><span>0{index + 1}</span>{index === 0 && 'The room where our story began'}</figcaption>
               </figure>
             ))}
           </div>
 
           <blockquote>
             “We did not launch a club just to host events. We launched a place where
-            students can find their starting point—and keep moving forward together.”
+            students can find their starting point and keep moving forward together”
           </blockquote>
         </section>
 
