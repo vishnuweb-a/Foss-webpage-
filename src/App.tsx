@@ -3,6 +3,7 @@ import { AboutSection } from '@/components/AboutSection'
 import { CodeOfConductPage } from '@/components/CodeOfConductPage'
 import { CommunitySection } from '@/components/CommunitySection'
 import { EventsSection } from '@/components/EventsSection'
+import { FourDaysOfAIPage } from '@/components/FourDaysOfAIPage'
 import { HeroSection } from '@/components/HeroSection'
 import { JoinSection } from '@/components/JoinSection'
 import { JourneyExperience } from '@/components/JourneyExperience'
@@ -14,6 +15,7 @@ const pageTitles: Record<string, string> = {
   '/': 'FOSS Club · SRM University Delhi-NCR',
   '/about': 'About · FOSS Club',
   '/events': 'Events & Activities · FOSS Club',
+  '/events/four-days-of-ai': 'Four Days of AI · FOSS Club',
   '/community': 'Community · FOSS Club',
   '/code-of-conduct': 'Code of Conduct · FOSS Club',
   '/journey': 'Welcome to FOSS · An interactive journey',
@@ -22,6 +24,7 @@ const pageTitles: Record<string, string> = {
 function CurrentPage({ path }: { path: string }) {
   if (path === '/about') return <><AboutSection /><ProblemSection /></>
   if (path === '/events') return <EventsSection />
+  if (path === '/events/four-days-of-ai') return <FourDaysOfAIPage />
   if (path === '/community') return <><CommunitySection /><JoinSection /></>
   if (path === '/code-of-conduct') return <CodeOfConductPage />
   return <HeroSection />

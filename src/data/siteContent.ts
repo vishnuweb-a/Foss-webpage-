@@ -18,6 +18,7 @@ export type ClubEvent = {
   category: string
   title: string
   date: string
+  dateNote?: string
   format: string
   audience: string
   description: string
@@ -25,6 +26,7 @@ export type ClubEvent = {
   outcomes: string[]
   ctaLabel: string
   ctaUrl?: string
+  detailPath?: string
   icon: JourneyStep['icon']
   tone: JourneyStep['tone']
 }
@@ -110,7 +112,8 @@ export const events: ClubEvent[] = [
   {
     category: 'Online AI bootcamp + beginner-friendly buildathon',
     title: 'Four Days of AI',
-    date: 'August 24–27, 2026',
+    date: 'Coming soon',
+    dateNote: 'Tentatively scheduled for the first week of September 2026',
     format: 'Completely online · Beginner-friendly buildathon',
     audience: 'Open to SRM students and other interested learners',
     description: 'Learn the foundations of AI, explore modern developer tools, form a team, and build an AI-powered project with mentor guidance.',
@@ -139,6 +142,7 @@ export const events: ClubEvent[] = [
     outcomes: ['Build a practical AI project', 'Learn collaborative development', 'Receive mentor feedback', 'Present a working submission'],
     ctaLabel: 'Apply here',
     ctaUrl: 'https://forms.gle/TW9pS4X9vsPNYjYWA',
+    detailPath: '/events/four-days-of-ai',
     icon: 'learn',
     tone: 'blue',
   },

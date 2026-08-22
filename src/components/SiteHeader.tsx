@@ -7,6 +7,7 @@ export function SiteHeader() {
   const currentPath = window.location.pathname.replace(/\/$/, '') || '/'
 
   const closeMenu = () => setMenuOpen(false)
+  const isCurrent = (href: string) => currentPath === href || (href !== '/' && currentPath.startsWith(`${href}/`))
 
   return (
     <header className="site-header">
@@ -31,7 +32,7 @@ export function SiteHeader() {
             key={item.href}
             href={item.href}
             onClick={closeMenu}
-            aria-current={currentPath === item.href ? 'page' : undefined}
+            aria-current={isCurrent(item.href) ? 'page' : undefined}
           >
             {item.label}
           </a>

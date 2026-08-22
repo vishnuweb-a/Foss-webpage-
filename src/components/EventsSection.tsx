@@ -27,7 +27,11 @@ export function EventsSection() {
                   <h3>{event.title}</h3>
                 </div>
               </div>
-              <div className="event-date"><span>Save the date</span><strong>{event.date}</strong></div>
+              <div className="event-date">
+                <span>{event.dateNote ? 'Date update' : 'Save the date'}</span>
+                <strong>{event.date}</strong>
+                {event.dateNote && <small>{event.dateNote}</small>}
+              </div>
             </header>
 
             <div className="event-overview">
@@ -38,36 +42,47 @@ export function EventsSection() {
               </dl>
             </div>
 
-            <div className="event-schedule">
-              <div className="event-subheading"><span>Program</span><b>{event.schedule.length} days from learning to demo</b></div>
-              <div className={`schedule-grid ${event.schedule.length === 4 ? 'schedule-grid--four' : ''}`}>
-                {event.schedule.map((day) => (
-                  <section key={day.day}>
-                    <span>{day.day}</span>
-                    <h4>{day.title}</h4>
-                    <ul>{day.items.map((item) => <li key={item}>{item}</li>)}</ul>
-                  </section>
-                ))}
-              </div>
-            </div>
-
-            <div className="event-gains">
-              <div className="event-subheading"><span>What you’ll gain</span></div>
-              <ul className="event-outcomes">{event.outcomes.map((outcome) => <li key={outcome}>{outcome}</li>)}</ul>
-            </div>
-
-            <footer className="event-footer">
-              <p>Registration details and participant handbooks will be shared with the community.</p>
-              {event.ctaUrl ? (
-                <a className="sketch-button" href={event.ctaUrl} target="_blank" rel="noreferrer" aria-label={`Apply for ${event.title}`}>
-                  {event.ctaLabel} <span>↗</span>
+            {event.detailPath ? (
+              <footer className="event-footer event-footer--preview">
+                <p>Explore the complete four-day schedule, everything students will receive, how the beginner-friendly buildathon works, and how to apply.</p>
+                <a className="sketch-button" href={event.detailPath}>
+                  View full program <span>→</span>
                 </a>
-              ) : (
-                <button className="sketch-button event-cta-disabled" type="button" disabled>
-                  {event.ctaLabel}
-                </button>
-              )}
-            </footer>
+              </footer>
+            ) : (
+              <>
+                <div className="event-schedule">
+                  <div className="event-subheading"><span>Program</span><b>{event.schedule.length} days from learning to demo</b></div>
+                  <div className={`schedule-grid ${event.schedule.length === 4 ? 'schedule-grid--four' : ''}`}>
+                    {event.schedule.map((day) => (
+                      <section key={day.day}>
+                        <span>{day.day}</span>
+                        <h4>{day.title}</h4>
+                        <ul>{day.items.map((item) => <li key={item}>{item}</li>)}</ul>
+                      </section>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="event-gains">
+                  <div className="event-subheading"><span>What you’ll gain</span></div>
+                  <ul className="event-outcomes">{event.outcomes.map((outcome) => <li key={outcome}>{outcome}</li>)}</ul>
+                </div>
+
+                <footer className="event-footer">
+                  <p>Registration details and participant handbooks will be shared with the community.</p>
+                  {event.ctaUrl ? (
+                    <a className="sketch-button" href={event.ctaUrl} target="_blank" rel="noreferrer" aria-label={`Apply for ${event.title}`}>
+                      {event.ctaLabel} <span>↗</span>
+                    </a>
+                  ) : (
+                    <button className="sketch-button event-cta-disabled" type="button" disabled>
+                      {event.ctaLabel}
+                    </button>
+                  )}
+                </footer>
+              </>
+            )}
           </article>
         ))}
       </div>
