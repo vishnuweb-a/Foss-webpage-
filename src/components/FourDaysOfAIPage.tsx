@@ -1,5 +1,6 @@
 import { DoodleIcon } from '@/components/DoodleIcon'
 import { events } from '@/data/siteContent'
+import bhawnaSpeakerPhoto from '@/assets/bhawna-chauhan-speaker.jpg'
 
 const studentBenefits = [
   ['Live guided learning', 'Understand AI concepts and tools through practical, beginner-first sessions.'],
@@ -13,8 +14,8 @@ const studentBenefits = [
 const speaker = {
   name: 'Bhawna Chauhan',
   role: 'DevRel Engineer & creative all-rounder at Superplane',
-  bio: 'Bhawna builds developer-focused products, explains complex technology in a practical way, and helps developers succeed with the tools they use. She is also building Swarmbase as its founding engineer and has worked across AI, developer tooling, open source, and community programs.',
-  highlights: ['Founding Engineer at Swarmbase', 'GitHub Campus Expert', '20+ hackathon wins', 'MLH Top 50 Hacker'],
+  bio: 'Bhawna builds developer-focused products, explains complex technology in a practical way and helps developers succeed with the tools they use. She is also building NobiRobotics as one of the founder and has worked across AI, developer tooling, open source and community programs.',
+  highlights: ['MLH Fellow', 'GitHub Campus Expert', '20+ hackathon wins', 'MLH Top 50 Hacker'],
   linkedin: 'https://www.linkedin.com/in/pixawna/',
 }
 
@@ -75,7 +76,11 @@ export function FourDaysOfAIPage() {
       <section className="ai-speaker">
         <div className="ai-speaker-intro">
           <span className="section-number">Meet your speaker</span>
-          <div className="speaker-monogram" aria-hidden="true">BC</div>
+          <img
+            className="speaker-photo"
+            src={bhawnaSpeakerPhoto}
+            alt="Bhawna Chauhan, speaker for Four Days of AI"
+          />
           <p>Learn from someone whose own journey began with hackathons and open source.</p>
         </div>
         <div className="ai-speaker-profile">
