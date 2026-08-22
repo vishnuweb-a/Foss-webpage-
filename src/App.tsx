@@ -18,7 +18,7 @@ const pageTitles: Record<string, string> = {
   '/events/four-days-of-ai': 'Four Days of AI · FOSS Club',
   '/community': 'Community · FOSS Club',
   '/code-of-conduct': 'Code of Conduct · FOSS Club',
-  '/journey': 'Welcome to FOSS · An interactive journey',
+  '/journey': 'Our Journey · FOSS Club',
 }
 
 function CurrentPage({ path }: { path: string }) {
