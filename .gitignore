@@ -1,6 +1,11 @@
+# Dependencies and production output
 node_modules
 dist
+
+# Local system and development files
 .DS_Store
 *.local
 .vite
+
+# Generated TypeScript incremental build caches
 *.tsbuildinfo
