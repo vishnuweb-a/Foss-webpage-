@@ -5,6 +5,7 @@ import { CommunitySection } from '@/components/CommunitySection'
 import { EventsSection } from '@/components/EventsSection'
 import { FourDaysOfAIPage } from '@/components/FourDaysOfAIPage'
 import { HeroSection } from '@/components/HeroSection'
+import { InaugurationGallery } from '@/components/InaugurationGallery'
 import { JoinSection } from '@/components/JoinSection'
 import { JourneyExperience } from '@/components/JourneyExperience'
 import { ProblemSection } from '@/components/ProblemSection'
@@ -22,7 +23,7 @@ const pageTitles: Record<string, string> = {
 }
 
 function CurrentPage({ path }: { path: string }) {
-  if (path === '/about') return <><AboutSection /><ProblemSection /></>
+  if (path === '/about') return <><AboutSection /><ProblemSection /><InaugurationGallery /></>
   if (path === '/events') return <EventsSection />
   if (path === '/events/four-days-of-ai') return <FourDaysOfAIPage />
   if (path === '/community') return <><CommunitySection /><JoinSection /></>

@@ -33,7 +33,7 @@ const journeyMilestones = [
   },
   {
     phase: 'Chapter 02 · Learn together',
-    date: fourDays?.date ?? 'Coming soon',
+    date: fourDays?.date ?? '1st to 4th September 2026',
     title: fourDays?.title ?? 'Four Days of AI',
     copy: 'A completely free, beginner-friendly program that takes students from AI foundations to a working project and a confident final pitch.',
     status: 'Applications open',

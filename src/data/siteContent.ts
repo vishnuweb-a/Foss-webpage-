@@ -41,7 +41,7 @@ export const navigation = [
 
 export const links = {
   whatsapp: 'https://chat.whatsapp.com/JBZ3Vw2w34DEmwyL9NU6qT',
-  instagram: 'https://instagram.com/srmuniversitydelhincrsnp',
+  instagram: 'https://www.instagram.com/foss.srmuh?igsi=bHVlbmxxOHl6eGF4',
   linkedin: 'https://in.linkedin.com/school/srm-university-haryana/',
   codeOfConduct: '/code-of-conduct',
 } as const
@@ -112,8 +112,7 @@ export const events: ClubEvent[] = [
   {
     category: 'AI bootcamp + beginner-friendly buildathon',
     title: 'Four Days of AI',
-    date: 'Coming soon',
-    dateNote: 'Tentatively scheduled for the first week of September 2026',
+    date: '1st to 4th September 2026',
     format: 'Format will be announced soon',
     audience: 'Open to SRM students and other interested learners',
     description: 'Learn the foundations of AI, explore modern developer tools, form a team, and build an AI-powered project with mentor guidance.',
@@ -153,24 +152,8 @@ export const events: ClubEvent[] = [
     format: 'In person · Three-day hackathon',
     audience: 'Hosted at SRM University Delhi-NCR, Sonepat',
     description: 'Build practical AI solutions in multidisciplinary teams with technical, product, design, GitHub, and deployment support.',
-    schedule: [
-      {
-        day: 'Day 01',
-        title: 'Opening & Kick-off',
-        items: ['Registration and opening ceremony', 'FOSS and HackAI introduction', 'Problem statements, tracks and rules', 'Team formation, validation and hackathon start'],
-      },
-      {
-        day: 'Day 02',
-        title: 'Building & Mentorship',
-        items: ['Full project-building day', 'Technical, product and design mentorship', 'GitHub and deployment support', 'Progress checkpoints and project feedback'],
-      },
-      {
-        day: 'Day 03',
-        title: 'Submission & Demo Day',
-        items: ['Final development and submission', 'Technical screening', 'Project demonstrations and jury evaluation', 'Awards, certificates and closing ceremony'],
-      },
-    ],
-    outcomes: ['Build a practical AI solution', 'Collaborate across disciplines', 'Learn from mentors and professionals', 'Showcase work to faculty and judges'],
+    schedule: [],
+    outcomes: [],
     ctaLabel: 'Stay tuned',
     icon: 'grow',
     tone: 'orange',

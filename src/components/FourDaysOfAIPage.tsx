@@ -42,9 +42,9 @@ export function FourDaysOfAIPage() {
 
         <aside className="ai-event-date-card">
           <DoodleIcon name="learn" />
-          <span>Date update</span>
+          <span>Save the date</span>
           <strong>{event.date}</strong>
-          <p>{event.dateNote}</p>
+          {event.dateNote && <p>{event.dateNote}</p>}
           <div><b>04</b><small>days from learning to pitching</small></div>
         </aside>
       </header>

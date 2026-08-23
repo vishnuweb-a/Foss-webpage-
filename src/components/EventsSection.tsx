@@ -49,6 +49,13 @@ export function EventsSection() {
                   View full program <span>→</span>
                 </a>
               </footer>
+            ) : event.ctaLabel === 'Stay tuned' ? (
+              <footer className="event-footer event-footer--preview event-footer--stay-tuned">
+                <p>Full program details will be announced soon.</p>
+                <button className="sketch-button event-cta-disabled" type="button" disabled>
+                  Stay tuned
+                </button>
+              </footer>
             ) : (
               <>
                 <div className="event-schedule">
