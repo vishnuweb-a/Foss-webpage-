@@ -35,7 +35,7 @@ const journeyMilestones = [
     phase: 'Chapter 02 · Learn together',
     date: fourDays?.date ?? '1st to 4th September 2026',
     title: fourDays?.title ?? 'Four Days of AI',
-    copy: 'A completely free, beginner-friendly program that takes students from AI foundations to a working project and a confident final pitch.',
+    copy: 'A completely free, beginner-friendly program that takes students from AI foundations to a completed project and an online winner announcement.',
     status: 'Applications open',
     href: fourDays?.detailPath,
     icon: 'learn' as const,

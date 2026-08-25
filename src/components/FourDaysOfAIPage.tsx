@@ -5,10 +5,10 @@ import bhawnaSpeakerPhoto from '@/assets/bhawna-chauhan-speaker.jpg'
 const studentBenefits = [
   ['Live guided learning', 'Understand AI concepts and tools through practical, beginner-first sessions.'],
   ['A project you built', 'Move from an idea to a working AI-powered project you can demonstrate.'],
-  ['Mentor support', 'Get help during ideation, building, debugging, and pitch preparation.'],
+  ['Mentor support', 'Get help during ideation, building, debugging, and project completion.'],
   ['GitHub experience', 'Learn how to work with Git, GitHub, repositories, and collaborative workflows.'],
   ['Team collaboration', 'Build alongside other learners and experience how technical teams work together.'],
-  ['Demo-day confidence', 'Practice presenting your problem, solution, product decisions, and working demo.'],
+  ['Submission confidence', 'Learn how to finish and submit a clear, working buildathon project.'],
 ]
 
 const speaker = {
@@ -45,15 +45,15 @@ export function FourDaysOfAIPage() {
           <span>Save the date</span>
           <strong>{event.date}</strong>
           {event.dateNote && <p>{event.dateNote}</p>}
-          <div><b>04</b><small>days from learning to pitching</small></div>
+          <div><b>04</b><small>days from learning to winner announcements</small></div>
         </aside>
       </header>
 
       <div className="ai-event-quick-facts" aria-label="Event highlights">
         <div><span>₹0</span><p><b>Completely free</b>No application or participation fee</p></div>
-        <div><span>TBA</span><p><b>Program format</b>Delivery details will be announced soon</p></div>
+        <div><span>Hybrid</span><p><b>Program format</b>In-person, online, and independent building</p></div>
         <div><span>01</span><p><b>Beginner buildathon</b>Guided from idea to working project</p></div>
-        <div><span>04</span><p><b>Focused days</b>Learn, build, pitch, and grow</p></div>
+        <div><span>04</span><p><b>Focused days</b>Learn, build, finish, and celebrate</p></div>
       </div>
 
       <section className="ai-benefits">
@@ -125,7 +125,7 @@ export function FourDaysOfAIPage() {
           <p><b>01 · Pick a problem</b>Start with a clear, useful idea that can be built within the program.</p>
           <p><b>02 · Plan the smallest version</b>Mentors help you reduce the idea to something achievable and demonstrable.</p>
           <p><b>03 · Build with support</b>Use guided checkpoints, office hours, and technical help when you get stuck.</p>
-          <p><b>04 · Pitch what you made</b>Show the problem, your approach, the working project, and what you learned.</p>
+          <p><b>04 · Submit what you made</b>Finish your working project and submit it before the building period closes.</p>
         </div>
       </section>
 

@@ -50,13 +50,13 @@ visitors can explore the club without a long single-page layout.
 
 ### Four Days of AI · 1st to 4th September 2026
 
-A completely free, beginner-friendly AI bootcamp and buildathon. Students move
-from foundations to a working project across four days:
+A completely free, beginner-friendly hybrid AI bootcamp and buildathon with
+in-person learning, online sessions, an independent build period, and an online finale:
 
-- **Day 1:** AI foundations, FOSS, Git, GitHub, and responsible AI
-- **Day 2:** Building with AI, APIs, agents, automation, and project ideation
-- **Day 3:** Beginner-friendly buildathon with mentor support
-- **Day 4:** Pitch preparation, project demos, feedback, and results
+- **Day 1 · Tuesday, 1 September:** In person from 10:00 AM–12:00 PM for Version Control with Git and GitHub, followed by AI Foundations from 1:00–2:00 PM; online Google Meet doubt session from 9:00–11:00 PM
+- **Day 2 · Wednesday, 2 September:** Online session on building a first project with an AI agent from 8:00–9:00 PM; buildathon kickoff from 9:30–10:00 PM
+- **Day 3 · Thursday, 3 September:** Independent project-building period ending at 9:30 PM
+- **Day 4 · Friday, 4 September:** Online closing ceremony and winner announcements at 7:30 PM
 
 The event page also introduces speaker **Bhawna Chauhan**, an MLH Fellow and
 founder building NobiRobotics. [Apply for Four Days of AI](https://forms.gle/TW9pS4X9vsPNYjYWA).
