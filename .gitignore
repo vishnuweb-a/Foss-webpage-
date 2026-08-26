@@ -9,3 +9,5 @@ dist
 
 # Generated TypeScript incremental build caches
 *.tsbuildinfo
+.vercel
+.env*
