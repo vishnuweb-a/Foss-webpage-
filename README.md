@@ -42,6 +42,7 @@ visitors can explore the club without a long single-page layout.
 | `/about` | What FOSS Club is, the problem it solves, and inauguration photo gallery |
 | `/events` | Current and upcoming events |
 | `/events/four-days-of-ai` | Complete Four Days of AI program, speaker, outcomes, and application link |
+| `/events/four-days-of-ai/buildathon` | End-to-end buildathon brief, timeline, submission checklist, judging, rules, rewards, and FAQs |
 | `/community` | Community invitation and official social links |
 | `/journey` | Creative wave timeline from the club inauguration to upcoming milestones |
 | `/code-of-conduct` | Community standards, reporting guidance, and faculty coordinators |
@@ -53,13 +54,16 @@ visitors can explore the club without a long single-page layout.
 A completely free, beginner-friendly hybrid AI bootcamp and buildathon with
 in-person learning, online sessions, an independent build period, and an online finale:
 
-- **Day 1 · Tuesday, 1 September:** In person from 10:00 AM–12:00 PM for Version Control with Git and GitHub, followed by AI Foundations from 1:00–2:00 PM; online Google Meet doubt session from 9:00–11:00 PM
-- **Day 2 · Wednesday, 2 September:** Online session on building a first project with an AI agent from 8:00–9:00 PM; buildathon kickoff from 9:30–10:00 PM
-- **Day 3 · Thursday, 3 September:** Independent project-building period ending at 9:30 PM
+- **Day 1 · Tuesday, 1 September:** In person from 10:00 AM–12:00 PM for Version Control with Git and GitHub, followed by AI Foundations from 1:00–2:00 PM; the buildathon and online Google Meet doubt session begin at 9:00 PM
+- **Day 2 · Wednesday, 2 September:** Online session on building a first project with an AI agent from 8:00–9:00 PM; buildathon submissions close at 9:00 PM
+- **Day 3 · Thursday, 3 September:** Project review, judging, and winner selection
 - **Day 4 · Friday, 4 September:** Online closing ceremony and winner announcements at 7:30 PM
 
 The event page also introduces speaker **Bhawna Chauhan**, an MLH Fellow and
 founder building NobiRobotics. [Apply for Four Days of AI](https://forms.gle/TW9pS4X9vsPNYjYWA).
+
+The dedicated buildathon page documents the 24-hour core window, completion
+rewards, winner benefits, submission requirements, judging criteria, rules, and FAQs.
 
 ### HackAI by SRM · 25–27 September 2026
 

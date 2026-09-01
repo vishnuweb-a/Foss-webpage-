@@ -33,8 +33,8 @@ export function FourDaysOfAIPage() {
           <h1>Four Days<br />of <span className="marker-underline">AI.</span></h1>
           <p>{event.description}</p>
           <div className="ai-event-actions">
-            <a className="sketch-button" href={event.ctaUrl} target="_blank" rel="noreferrer">
-              Apply for free <span>↗</span>
+            <a className="sketch-button" href={event.buildathonPath}>
+              View buildathon details <span>→</span>
             </a>
             <span>No registration fee · No prior AI experience required</span>
           </div>

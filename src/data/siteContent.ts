@@ -27,6 +27,7 @@ export type ClubEvent = {
   ctaLabel: string
   ctaUrl?: string
   detailPath?: string
+  buildathonPath?: string
   icon: JourneyStep['icon']
   tone: JourneyStep['tone']
 }
@@ -120,17 +121,17 @@ export const events: ClubEvent[] = [
       {
         day: 'Day 01',
         title: 'Tuesday, 1 September · In person',
-        items: ['10:00 AM–12:00 PM · Session 01: Version Control with Git and GitHub (session + doubts)', '1:00–2:00 PM · Session 02: AI Foundations', '9:00–11:00 PM · Online doubt session via Google Meet'],
+        items: ['10:00 AM–12:00 PM · Session 01: Version Control with Git and GitHub (session + doubts)', '1:00–2:00 PM · Session 02: AI Foundations', '9:00 PM · Buildathon opens and the online Google Meet doubt session begins', '11:00 PM · Live doubt session ends; the buildathon continues'],
       },
       {
         day: 'Day 02',
         title: 'Wednesday, 2 September · Online',
-        items: ['8:00–9:00 PM · Session 01: Build your first project using an AI agent (session + doubts)', '9:30–10:00 PM · Session 02: Buildathon kickoff'],
+        items: ['8:00–9:00 PM · Build your first project using an AI agent (session + doubts)', '9:00 PM · Buildathon submission window closes'],
       },
       {
         day: 'Day 03',
-        title: 'Thursday, 3 September · Building period',
-        items: ['Work independently on your buildathon project', '9:30 PM · Building period ends'],
+        title: 'Thursday, 3 September · Review day',
+        items: ['Submitted projects are reviewed', 'Judging and winner selection'],
       },
       {
         day: 'Day 04',
@@ -142,6 +143,7 @@ export const events: ClubEvent[] = [
     ctaLabel: 'Apply here',
     ctaUrl: 'https://forms.gle/TW9pS4X9vsPNYjYWA',
     detailPath: '/events/four-days-of-ai',
+    buildathonPath: '/events/four-days-of-ai/buildathon',
     icon: 'learn',
     tone: 'blue',
   },
