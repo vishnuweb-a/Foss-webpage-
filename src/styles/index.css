@@ -248,6 +248,7 @@ button { color: inherit; }
 .ai-event-page { padding-top: 11.5rem; background: var(--paper); }
 .event-back-link { display: inline-block; margin-bottom: 3rem; padding-bottom: .3rem; color: var(--ink-soft); border-bottom: 1.5px dashed #8d989d; font-size: .82rem; font-weight: 650; }
 .ai-event-hero { display: grid; grid-template-columns: 1.25fr .75fr; gap: clamp(3rem, 7vw, 8rem); align-items: center; padding-bottom: 6rem; }
+.ai-event-hero--winners { grid-template-columns: minmax(0, 800px); padding-bottom: 0; }
 .ai-event-title h1 { margin: 1.2rem 0 1.8rem; font-family: 'Comic Sans MS', 'Chalkboard SE', cursive; font-size: clamp(4.5rem, 9vw, 9.5rem); line-height: .82; letter-spacing: -.075em; }
 .ai-event-title > p { max-width: 700px; margin: 0; color: var(--ink-soft); font-size: clamp(1.05rem, 1.6vw, 1.3rem); line-height: 1.7; }
 .ai-event-actions { display: flex; align-items: center; gap: 1.8rem; margin-top: 2.2rem; }
@@ -278,7 +279,7 @@ button { color: inherit; }
 .ai-benefit-grid article > span,.ai-program-grid article > span { color: #4c8bbd; font: 650 .66rem/1 'JetBrains Mono Variable', monospace; }
 .ai-benefit-grid h3 { margin: 4rem 0 .75rem; font-family: 'Comic Sans MS', cursive; font-size: 1.45rem; }
 .ai-benefit-grid p { margin: 0; color: var(--ink-soft); font-size: .85rem; line-height: 1.55; }
-.ai-speaker { display: grid; grid-template-columns: minmax(300px, .9fr) 1.1fr; gap: 5vw; align-items: stretch; margin-top: 8rem; padding: 4rem; background: #17232b; color: #fffdf5; border: 2px solid var(--line); border-radius: 6px 10px 5px 12px; box-shadow: 9px 10px 0 rgba(107,156,179,.2), 10px 11px 0 var(--line); }
+.ai-speaker { display: grid; grid-template-columns: minmax(300px, .9fr) 1.1fr; gap: 5vw; align-items: stretch; margin-top: 5rem; padding: 4rem; background: #17232b; color: #fffdf5; border: 2px solid var(--line); border-radius: 6px 10px 5px 12px; box-shadow: 9px 10px 0 rgba(107,156,179,.2), 10px 11px 0 var(--line); }
 .ai-speaker-intro { display: flex; flex-direction: column; align-items: flex-start; }
 .ai-speaker-intro .section-number { color: #93d7f1; }
 .speaker-photo { display: block; width: min(100%, 440px); aspect-ratio: 1; margin: 1.25rem 0 2rem; object-fit: cover; border: 2px solid #fffdf5; border-radius: 7px 14px 8px 12px; box-shadow: 10px 10px 0 #f4cc58; transform: rotate(-1.5deg); }
