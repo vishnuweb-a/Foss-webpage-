@@ -32,6 +32,17 @@ export type ClubEvent = {
   tone: JourneyStep['tone']
 }
 
+export type EventWinner = {
+  rank: number
+  name: string
+  programme: string
+  project: string
+  githubUrl: string
+  liveUrl?: string
+  videoUrl?: string
+  score: number
+}
+
 export const navigation = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
@@ -159,6 +170,64 @@ export const events: ClubEvent[] = [
     ctaLabel: 'Stay tuned',
     icon: 'grow',
     tone: 'orange',
+  },
+]
+
+export const fourDaysOfAIWinners: EventWinner[] = [
+  {
+    rank: 1,
+    name: 'Aryan',
+    programme: 'MCA · 1st year',
+    project: 'Healthify',
+    githubUrl: 'https://github.com/aryann-tyagi/healthify',
+    liveUrl: 'https://healthify-ten-xi.vercel.app/',
+    score: 10,
+  },
+  {
+    rank: 2,
+    name: 'Vishal Patel',
+    programme: 'BTech CSE Core · 1st year · Section 8',
+    project: 'Study to Shine',
+    githubUrl: 'https://github.com/gigachaudhary2007-gif/workshop4days.git',
+    liveUrl: 'https://study-to-shine-710844388481.us-west1.run.app',
+    videoUrl: 'https://drive.google.com/file/d/10DvxFtaln6yfbTAhGB-k3FEPFF6TInfO/view?usp=drive_link',
+    score: 10,
+  },
+  {
+    rank: 3,
+    name: 'Aditya Sharma',
+    programme: 'BTech CSE DSAI · 1st year',
+    project: 'CinePlan',
+    githubUrl: 'https://github.com/tekcor3333/Workshop',
+    liveUrl: 'https://cineplan-728256478493.asia-southeast1.run.app',
+    videoUrl: 'https://drive.google.com/drive/folders/1qzFoG_V4bN-5lvsROTvHtJevig78f3Rh',
+    score: 10,
+  },
+  {
+    rank: 4,
+    name: 'Pratyush Gautam',
+    programme: 'BTech CSE Core · 1st year · Section 10',
+    project: 'HabitFlow',
+    githubUrl: 'https://github.com/pratyushgautam2048-sys/WORKSHOP-1.git',
+    liveUrl: 'https://habitflow-6713.ai.studio',
+    score: 9,
+  },
+  {
+    rank: 5,
+    name: 'Yuvraj Singh',
+    programme: 'BTech CSE · 1st year · Section 4',
+    project: 'Photo Booth',
+    githubUrl: 'https://github.com/ysnrajput-ux/Photo-Booth',
+    liveUrl: 'https://photoboothh-wobt.onrender.com/',
+    score: 9,
+  },
+  {
+    rank: 6,
+    name: 'Ishu Goel',
+    programme: 'BTech CSE Core · 1st year · Section 9',
+    project: 'PopNote',
+    githubUrl: 'https://github.com/ishugoel9971-netizen/popnote.git',
+    score: 9,
   },
 ]
 

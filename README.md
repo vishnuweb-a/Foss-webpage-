@@ -65,6 +65,9 @@ founder building NobiRobotics. [Apply for Four Days of AI](https://forms.gle/TW9
 The dedicated buildathon page documents the 24-hour core window, completion
 rewards, winner benefits, submission requirements, judging criteria, rules, and FAQs.
 
+The Four Days of AI event page also celebrates the six selected winners and links
+to their submitted GitHub repositories, live builds, and videos when supplied.
+
 ### HackAI by SRM · 25–27 September 2026
 
 HackAI by SRM is the next planned AI hackathon. Its detailed program will be

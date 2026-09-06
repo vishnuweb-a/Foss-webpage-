@@ -1,5 +1,5 @@
 import { DoodleIcon } from '@/components/DoodleIcon'
-import { events } from '@/data/siteContent'
+import { events, fourDaysOfAIWinners } from '@/data/siteContent'
 import bhawnaSpeakerPhoto from '@/assets/bhawna-chauhan-speaker.jpg'
 
 const studentBenefits = [
@@ -114,6 +114,36 @@ export function FourDaysOfAIPage() {
             </article>
           ))}
         </div>
+      </section>
+
+      <section className="ai-winners" id="winners">
+        <header className="ai-section-heading ai-section-heading--split">
+          <div>
+            <span className="section-number">Four Days of AI · Top 6 winners</span>
+            <h2>Six projects.<br />One big first <span className="marker-underline">step.</span></h2>
+          </div>
+          <p>
+            These students took their ideas all the way to a public project. Explore
+            their repositories and live builds below.
+          </p>
+        </header>
+        <div className="ai-winner-grid">
+          {fourDaysOfAIWinners.map((winner) => (
+            <article className={`ai-winner-card ai-winner-card--${winner.rank}`} key={winner.name}>
+              <div className="ai-winner-rank"><span>Top</span><strong>0{winner.rank}</strong></div>
+              <span className="ai-winner-score">{winner.score}/10</span>
+              <p className="ai-winner-project">{winner.project}</p>
+              <h3>{winner.name}</h3>
+              <p className="ai-winner-programme">{winner.programme}</p>
+              <div className="ai-winner-links" aria-label={`${winner.name}'s project links`}>
+                <a href={winner.githubUrl} target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
+                {winner.liveUrl && <a href={winner.liveUrl} target="_blank" rel="noreferrer">Live project <span>↗</span></a>}
+                {winner.videoUrl && <a href={winner.videoUrl} target="_blank" rel="noreferrer">Video <span>↗</span></a>}
+              </div>
+            </article>
+          ))}
+        </div>
+        <p className="ai-winners-note">Selected from submitted Four Days of AI buildathon projects. Project links are shared exactly as submitted by the participants.</p>
       </section>
 
       <section className="ai-buildathon">
